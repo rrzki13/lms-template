@@ -103,7 +103,7 @@
                 </div>
             </div>
         </div>
-        <div class="layout-w">
+        <div class="layout-w" style="height: 100vh;">
             <div class="menu-mobile menu-activated-on-click color-scheme-light">
                 <div class="mm-logo-buttons-w">
                     <div class="mm-buttons">
@@ -648,239 +648,83 @@
                     <i class="os-icon os-icon-grid-squares-22"></i><span>Sidebar</span>
                 </div>
                 <div class="content-i">
-                    <div class="content-box">
-                        <div class="row">
-                            
-                            <div class="col-sm-12">
-                                <div class="element-wrapper">
-                                    <h6 class="element-header">Campaign Data</h6>
-                                    <div class="element-box">
-                                        <form>
-                                          <div class="row">
-                                            <div class="col-sm-3">
-                                              <div class="form-group">
-                                                <label for=""> Date</label><input class="form-control"  type="datetime-local">
-                                              </div>
-                                            </div>
-                                            <div class="col-sm-3">
-                                              <div class="form-group">
-                                                <label for="">Campaign Name</label><input class="form-control" type="text">
-                                              </div>
-                                            </div>
-                                            <div class="col-sm-3">
-                                              <div class="form-group">
-                                                <label for=""> Campaign Type</label><input class="form-control" type="text">
-                                              </div>
-                                            </div>
-                                            <div class="col-sm-3">
-                                              <div class="form-group">
-                                                <label for="">Create By</label><input class="form-control" placeholder="Password" type="text">
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="form-buttons-w">
-                                            <div class="d-flex justify-content-end">
-                                                <button class="btn btn-light" type="submit"> Export</button>
-                                                <button class="btn btn-light" type="submit"> Reset</button>
-                                                <button class="btn btn-primary" type="submit"> Query</button>
-                                            </div>
-                                          </div>
-                                        </form>
-                                      </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-12">
-                                <div class="element-wrapper">
-                                    <div class="element-box">
+                    <div class="content-box w-100">
+
+
+                        <div class="element-wrapper">
+                            <h6 class="element-header">Reward List</h6>
+                            <div class="element-content">
+                                <div class="element-box">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="">
+                                            <form>
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group"><input class="form-control form-control-sm"
+                                                                type="text" placeholder="Reward Name...">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group"><input
+                                                                class="form-control form-control-sm" type="text" placeholder="Reward Type...">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="">
+                                            <button class="btn btn-sm btn-primary">Query</button>
+                                            <button class="btn btn-sm btn-light">Reset</button>
+                                        </div>
+                                    </div>
+                                    <div class="mt-2 mb-4">
+                                        <button class="btn btn-primary">New Project</button>
+                                    </div>
+
+                                    <!--------------------
+                                            START - Controls Above Table
+                                            -------------------->
+                                    <!--------------------
+                                            END - Controls Above Table
+                                            -------------------->
+                                    <div class="table-responsive">
                                         <!--------------------
-                                        START - Controls Above Table
-                                        -------------------->
-                                        <!--------------------
-                                        END - Controls Above Table
-                                        -------------------->
-                                        <div class="table-responsive">
-                                          <!--------------------
-                                          START - Basic Table
-                                          -------------------->
-                                          <table class="table table-lightborder">
+                                              START - Basic Table
+                                              -------------------->
+                                        <table class="table table-lightborder">
                                             <thead>
-                                              <tr>
-                                                <th>
-                                                  Campaign Name
-                                                </th>
-                                                <th>
-                                                  Campaign Code
-                                                </th>
-                                                <th>
-                                                  Start Time
-                                                </th>
-                                                <th >
-                                                  End Time
-                                                </th>
-                                                <th >
-                                                  Total Reach Users
-                                                </th>
-                                                <th >
-                                                  Total Clicks
-                                                </th>
-                                                <th >
-                                                  Total Check Out
-                                                </th>
-                                                <th >
-                                                  Order Quantity
-                                                </th>
-                                                <th >
-                                                  Order Taken Users
-                                                </th>
-                                              </tr>
+                                                <tr>
+                                                    <th>
+                                                        Reward Name
+                                                    </th>
+                                                    <th>
+                                                        Reward Type
+                                                    </th>
+                                                    <th>
+                                                        Rank
+                                                    </th>
+                                                    <th>
+                                                        Effective Date
+                                                    </th>
+                                                    <th>
+                                                        Expired Date
+                                                    </th>
+                                                    <th>
+                                                        Operation
+                                                    </th>
+
+                                                </tr>
                                             </thead>
-                                          </table>
-                                          <!--------------------
-                                          END - Basic Table
-                                          -------------------->
-                                        </div>
-                                      </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-12">
-                                <div class="element-wrapper">
-                                    <h6 class="element-header">Core Data</h6>
-                                    <div class="element-content">
-                                        <div class="row">
-                                            <div class="col-sm-12 col-xxxl-3">
-                                                <div class="element-box el-tablo">
-                                                    <div class="row">
-                                                        <div class="col-sm-2 col-xxxl-2">
-                                                            <div class="el-tablo-cell right">
-                                                                <div class="label">Revenue</div>
-                                                                <div class="value">0.00</div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-2 col-xxxl-2">
-                                                            <div class="el-tablo-cell right">
-                                                                <div class="label">Order Quantity </div>
-                                                                <div class="value">0</div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-2 col-xxxl-2">
-                                                            <div class="el-tablo-cell right">
-                                                                <div class="label">Reach User </div>
-                                                                <div class="value">0</div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-2 col-xxxl-2">
-                                                            <div class="el-tablo-cell right">
-                                                                <div class="label">Campaigns </div>
-                                                                <div class="value">0</div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-2 col-xxxl-2">
-                                                            <div class="el-tablo-cell right">
-                                                                <div class="label">CTR </div>
-                                                                <div class="value">0.00%</div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-2 col-xxxl-2">
-                                                            <div class="el-tablo-cell right">
-                                                                <div class="label">ARPPU </div>
-                                                                <div class="value">0</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        </table>
+                                        <!--------------------
+                                              END - Basic Table
+                                              -------------------->
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-sm-6 col-xxxl-6">
-                                <div class="element-wrapper">
-                                    <h6 class="element-header">Channel Overview</h6>
-                                    <div class="element-content">
-                                        <div class="row">
-                                            <div class="col-sm-12 col-xxxl-3">
-                                                <div class="element-box el-tablo">
-                                                    <div class="row">
-                                                        <div class="col-sm-3 col-xxxl-3">
-                                                            <div class="el-tablo-cell right">
-                                                                <div class="label" style="font-size: 0.5rem!important;">
-                                                                    Outbound </div>
-                                                                <div class="value">0</div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-3 col-xxxl-3">
-                                                            <div class="el-tablo-cell right">
-                                                                <div class="label" style="font-size: 0.5rem!important;">
-                                                                    Inbound </div>
-                                                                <div class="value">0</div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-3 col-xxxl-3">
-                                                            <div class="el-tablo-cell right">
-                                                                <div class="label" style="font-size: 0.5rem!important;">
-                                                                    Outbound Reach User</div>
-                                                                <div class="value">0</div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-3 col-xxxl-3">
-                                                            <div class="el-tablo-cell right">
-                                                                <div class="label" style="font-size: 0.5rem!important;">
-                                                                    Outbound Reach User</div>
-                                                                <div class="value">0</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 d-xxxl-6">
-                                <div class="element-wrapper">
-                                    <h6 class="element-header">Conversion Funnel</h6>
-                                    <div class="element-box">
-                                        <div class="el-chart-w">
-                                            <div class="chartjs-size-monitor">
-                                                <div class="chartjs-size-monitor-expand">
-                                                    <div class=""></div>
-                                                </div>
-                                                <div class="chartjs-size-monitor-shrink">
-                                                    <div class=""></div>
-                                                </div>
-                                            </div>
-                                            <canvas height="261" id="barChart1" width="543"
-                                                style="display: block; height: 174px; width: 362px;"
-                                                class="chartjs-render-monitor"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--END - Top Selling Chart-->
-                            </div>
-                            <div class="col-sm-12 d-xxxl-12">
-                                <div class="element-wrapper">
-                                    <h6 class="element-header">Conversion Events </h6>
-                                    <div class="element-box">
-                                        <div class="el-chart-w">
-                                            <div class="chartjs-size-monitor">
-                                                <div class="chartjs-size-monitor-expand">
-                                                    <div class=""></div>
-                                                </div>
-                                                <div class="chartjs-size-monitor-shrink">
-                                                    <div class=""></div>
-                                                </div>
-                                            </div>
-                                            <canvas height="261" id="barChart1" width="543"
-                                                style="display: block; height: 174px; width: 362px;"
-                                                class="chartjs-render-monitor"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--END - Top Selling Chart-->
-                            </div>
-                        </div>
+
+
                     </div>
                 </div>
             </div>
@@ -934,6 +778,7 @@
 
         ga("create", "UA-XXXXXXXX-9", "auto")
         ga("send", "pageview")
+
     </script>
 </body>
 
