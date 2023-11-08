@@ -7,11 +7,11 @@
 	<meta content="ie=edge" http-equiv="x-ua-compatible" />
 	<meta content="Loyalty Management System - SHIBLY" name="description" />
 	<meta content="width=device-width, initial-scale=1" name="viewport" />
-	<link href="favicon.png" rel="shortcut icon" />
+
 	<link href="apple-touch-icon.png" rel="apple-touch-icon" />
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css" />
 	<link href="vendors/css/select2.min.css" rel="stylesheet" />
-	<link href="vendors/bower_components/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" />
+	<link href="vendors\css\daterangepicker.css" rel="stylesheet" />
 	<link href="vendors/css/dropzone.css" rel="stylesheet" />
 	<link href="vendors/css/dataTables.bootstrap.min.css" rel="stylesheet" />
 	<link href="vendors/css/fullcalendar.min.css" rel="stylesheet" />
@@ -649,91 +649,137 @@
 				</div>
 				<div class="content-i">
 					<div class="content-box w-100">
-						
-							
-								<div class="element-wrapper">
-									<div class="element-actions">
-                                        <div class="d-flex">
-                                                <div class="form-group mr-3">
-                                                    <input class="form-control form-control-sm"  type="text">
-                                                  </div>
-                                              <a href="">Filter</a>
-                                        </div>
+						<div class="element-wrapper">
+							<div class="element-actions">
+								<div class="d-flex">
+									<div class="form-group mr-3">
+										<input class="form-control form-control-sm" type="text">
 									</div>
-									<h6 class="element-header">Project List</h6>
-									<div class="element-content">
-                                        <div class="element-box">
-                                            <div class="mt-2 mb-4">
-                                                <button class="btn btn-primary">New Project</button>
-                                            </div>
+									<a href="">Filter</a>
+								</div>
+							</div>
+							<h6 class="element-header">Project List</h6>
+							<div class="element-content">
+								<div class="element-box">
+									<div class="mt-2 mb-4">
+										<button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1"
+											data-dismiss="modal">New Project</button>
+									</div>
 
-                                            <!--------------------
+									<!--------------------
                                             START - Controls Above Table
                                             -------------------->
-                                            <!--------------------
+									<!--------------------
                                             END - Controls Above Table
                                             -------------------->
-                                            <div class="table-responsive">
-                                              <!--------------------
+									<div class="table-responsive">
+										<!--------------------
                                               START - Basic Table
                                               -------------------->
-                                              <table class="table table-lightborder">
-                                                <thead>
-                                                  <tr>
-                                                    <th>
-                                                      Project Name
-                                                    </th>
-                                                    <th>
-                                                      Project Code
-                                                    </th>
-                                                    <th>
-                                                      Effective Date
-                                                    </th>
-                                                    <th >
-                                                      Expired Date
-                                                    </th>
-                                                    <th >
-                                                      Life Cycle
-                                                    </th>
-                                                    <th >
-                                                      Creation Date
-                                                    </th>
-                                                    <th >
-                                                      Last Update
-                                                    </th>
-                                                    <th >
-                                                      Created by
-                                                    </th>
-                                                    <th >
-                                                      Creator Number
-                                                    </th>
-                                                    <th >
-                                                      Creator Email
-                                                    </th>
-                                                    <th >
-                                                      Project Documents
-                                                    </th>
-                                                    <th >
-                                                      Operation
-                                                    </th>
-                                                    
-                                                  </tr>
-                                                </thead>
-                                              </table>
-                                              <!--------------------
+										<table class="table table-lightborder">
+											<thead>
+												<tr>
+													<th>
+														Project Name
+													</th>
+													<th>
+														Project Code
+													</th>
+													<th>
+														Effective Date
+													</th>
+													<th>
+														Expired Date
+													</th>
+													<th>
+														Life Cycle
+													</th>
+													<th>
+														Creation Date
+													</th>
+													<th>
+														Last Update
+													</th>
+													<th>
+														Created by
+													</th>
+													<th>
+														Creator Number
+													</th>
+													<th>
+														Creator Email
+													</th>
+													<th>
+														Project Documents
+													</th>
+													<th>
+														Operation
+													</th>
+
+												</tr>
+											</thead>
+										</table>
+										<!--------------------
                                               END - Basic Table
                                               -------------------->
-                                            </div>
-                                          </div>
 									</div>
 								</div>
-							
-						
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="display-type"></div>
+	</div>
+	<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade right" id="exampleModal1"
+		role="dialog" tabindex="-1" data-backdrop="static" data-keyboard="false">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">
+						New Project
+					</h5>
+					<button aria-label="Close" class="close" data-dismiss="modal" type="button"><span
+							aria-hidden="true"> &times;</span></button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label for=""> Project Name</label><input class="form-control" type="name">
+						</div>
+						<div class="form-group">
+							<label for=""> Life Cycle</label><select class="form-control" type="text">
+								<option value=""></option>
+								<option value=""></option>
+								<option value=""></option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="">Target User Description</label><input class="form-control" type="text">
+						</div>
+						<div class="form-group">
+							<label for="">Frequency Control</label><select class="form-control" type="text">
+								<option value=""></option>
+								<option value=""></option>
+								<option value=""></option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="">Document Upload</label><input class="form-control-file" type="file">
+						</div>
+					</form>
+					<div class="mb-2 d-flex justify-content-end">
+						<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
+						<button class="btn btn-primary ml-2" type="button"> Save changes</button>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="display-type"></div>
+	</div>
 	</div>
 	<script src="vendors/js/jquery.min.js"></script>
 	<script src="vendors/js/popper.min.js"></script>
@@ -765,25 +811,6 @@
 	<script src="vendors/js/popover.js"></script>
 	<script src="js/demo_customizer.js?version=4.5.0"></script>
 	<script src="js/main.js?version=4.5.0"></script>
-	<script>
-		; (function (i, s, o, g, r, a, m) {
-			i["GoogleAnalyticsObject"] = r
-				; (i[r] =
-					i[r] ||
-					function () {
-						; (i[r].q = i[r].q || []).push(arguments)
-					}),
-					(i[r].l = 1 * new Date())
-				; (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0])
-			a.async = 1
-			a.src = g
-			m.parentNode.insertBefore(a, m)
-		})(window, document, "script", "https://www.google-analytics.com/analytics.js", "ga")
-
-		ga("create", "UA-XXXXXXXX-9", "auto")
-		ga("send", "pageview")
-        
-	</script>
 </body>
 
 </html>

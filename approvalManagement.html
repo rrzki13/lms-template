@@ -7,66 +7,65 @@
 	<meta content="ie=edge" http-equiv="x-ua-compatible" />
 	<meta content="Loyalty Management System - SHIBLY" name="description" />
 	<meta content="width=device-width, initial-scale=1" name="viewport" />
-	<link href="favicon.png" rel="shortcut icon" />
+
 	<link href="apple-touch-icon.png" rel="apple-touch-icon" />
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css" />
 	<link href="vendors/css/select2.min.css" rel="stylesheet" />
-	<link href="vendors/bower_components/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" />
+	<link href="vendors\css\daterangepicker.css" rel="stylesheet" />
 	<link href="vendors/css/dropzone.css" rel="stylesheet" />
 	<link href="vendors/css/dataTables.bootstrap.min.css" rel="stylesheet" />
 	<link href="vendors/css/fullcalendar.min.css" rel="stylesheet" />
 	<link href="vendors/css/perfect-scrollbar.min.css" rel="stylesheet" />
 	<link href="vendors/css/slick.css" rel="stylesheet" />
 	<link href="css/main.css?version=4.5.0" rel="stylesheet" />
-    <style>
-        /* Style the tab menu */
-.tab-container {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-}
+	<style>
+		/* Style the tab menu */
+		.tab-container {
+			display: flex;
+			flex-direction: column;
+			margin: 0 auto;
+		}
 
-.tab-button {
-    background-color: transparent;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    position: relative;
-}
+		.tab-button {
+			background-color: transparent;
+			border: none;
+			padding: 10px 20px;
+			cursor: pointer;
+			position: relative;
+		}
 
-.tab-button.active {
-    color: #000;
-}
+		.tab-button.active {
+			color: #000;
+		}
 
-/* Add an underline to the active tab with a smooth transition */
-.tab-button::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: #0077cc;
-    bottom: 0;
-    left: 0;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s;
-}
+		/* Add an underline to the active tab with a smooth transition */
+		.tab-button::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background-color: #0077cc;
+			bottom: 0;
+			left: 0;
+			transform: scaleX(0);
+			transform-origin: left;
+			transition: transform 0.3s;
+		}
 
-.tab-button.active::before {
-    transform: scaleX(1);
-}
+		.tab-button.active::before {
+			transform: scaleX(1);
+		}
 
-.tab-content {
-    display: none;
-    padding: 20px;
-}
+		.tab-content {
+			display: none;
+			padding: 20px;
+		}
 
-/* Style the active tab */
-.tab-content.active {
-    display: block;
-}
-
-    </style>
+		/* Style the active tab */
+		.tab-content.active {
+			display: block;
+		}
+	</style>
 </head>
 
 <body class="full-screen with-content-panel menu-position-side menu-side-left">
@@ -698,99 +697,100 @@
 				</div>
 				<div class="content-i">
 					<div class="content-box w-100">
-						
-							
-								<div class="element-wrapper">
-									<div class="element-actions">
-                                        <div class="d-flex">
-                                                <div class="form-group mr-3">
-                                                    <input class="form-control form-control-sm"  type="text">
-                                                  </div>
-                                              <a href="">Filter</a>
-                                        </div>
-									</div>
-									<h6 class="element-header">Approval Management List</h6>
-									<div class="element-content">
-										<div class="element-box">
-                                            <div class="tab-container">
-                                                <div class="tabs">
-                                                    <button class="tab-button active" onclick="openTab('tab1')">Pending for Approval</button>
-                                                    <button class="tab-button" onclick="openTab('tab2')">Emergency</button>
-                                                    <button class="tab-button" onclick="openTab('tab3')">Approved by Me</button>
-                                                    <button class="tab-button" onclick="openTab('tab4')">Created by Me</button>
-                                                    <button class="tab-button" onclick="openTab('tab5')">All</button>
-                                                </div>
-                                                <div id="tab1" class="tab-content">
-                                                </div>
-                                                <div id="tab2" class="tab-content">
-                                                    
-                                                </div>
-                                                <div id="tab3" class="tab-content">
-                                                    
-                                                </div>
-                                                <div id="tab4" class="tab-content">
-                                                    
-                                                </div>
-                                                <div id="tab5" class="tab-content">
-                                                    
-                                                </div>
-                                            </div>
 
-                                            <!--------------------
+
+						<div class="element-wrapper">
+							<div class="element-actions">
+								<div class="d-flex">
+									<div class="form-group mr-3">
+										<input class="form-control form-control-sm" type="text">
+									</div>
+									<a href="">Filter</a>
+								</div>
+							</div>
+							<h6 class="element-header">Approval Management List</h6>
+							<div class="element-content">
+								<div class="element-box">
+									<div class="tab-container">
+										<div class="tabs">
+											<button class="tab-button active" onclick="openTab('tab1')">Pending for
+												Approval</button>
+											<button class="tab-button" onclick="openTab('tab2')">Emergency</button>
+											<button class="tab-button" onclick="openTab('tab3')">Approved by Me</button>
+											<button class="tab-button" onclick="openTab('tab4')">Created by Me</button>
+											<button class="tab-button" onclick="openTab('tab5')">All</button>
+										</div>
+										<div id="tab1" class="tab-content">
+										</div>
+										<div id="tab2" class="tab-content">
+
+										</div>
+										<div id="tab3" class="tab-content">
+
+										</div>
+										<div id="tab4" class="tab-content">
+
+										</div>
+										<div id="tab5" class="tab-content">
+
+										</div>
+									</div>
+
+									<!--------------------
                                             START - Controls Above Table
                                             -------------------->
-                                            <!--------------------
+									<!--------------------
                                             END - Controls Above Table
                                             -------------------->
-                                            <div class="table-responsive">
-                                              <!--------------------
+									<div class="table-responsive">
+										<!--------------------
                                               START - Basic Table
                                               -------------------->
-                                              <table class="table table-lightborder">
-                                                <thead>
-                                                  <tr>
-                                                    <th>
-                                                      Name
-                                                    </th>
-                                                    <th>
-                                                      Code
-                                                    </th>
-                                                    <th>
-                                                      Object
-                                                    </th>
-                                                    <th >
-                                                      Created by
-                                                    </th>
-                                                    <th >
-                                                      Assign to
-                                                    </th>
-                                                    <th >
-                                                      Creation Date
-                                                    </th>
-                                                    <th >
-                                                      Process Date
-                                                    </th>
-                                                    <th >
-                                                      Cost Time(hour)
-                                                    </th>
-                                                    <th >
-                                                      Status
-                                                    </th>
-                                                    <th >
-                                                      Operation
-                                                    </th>
-                                                  </tr>
-                                                </thead>
-                                              </table>
-                                              <!--------------------
+										<table class="table table-lightborder">
+											<thead>
+												<tr>
+													<th>
+														Name
+													</th>
+													<th>
+														Code
+													</th>
+													<th>
+														Object
+													</th>
+													<th>
+														Created by
+													</th>
+													<th>
+														Assign to
+													</th>
+													<th>
+														Creation Date
+													</th>
+													<th>
+														Process Date
+													</th>
+													<th>
+														Cost Time(hour)
+													</th>
+													<th>
+														Status
+													</th>
+													<th>
+														Operation
+													</th>
+												</tr>
+											</thead>
+										</table>
+										<!--------------------
                                               END - Basic Table
                                               -------------------->
-                                            </div>
-                                          </div>
 									</div>
 								</div>
-							
-						
+							</div>
+						</div>
+
+
 					</div>
 				</div>
 			</div>
@@ -845,31 +845,31 @@
 		ga("create", "UA-XXXXXXXX-9", "auto")
 		ga("send", "pageview")
 
-        function openTab(tabName) {
-            // Get all tab buttons and tab contents
-            const tabButtons = document.getElementsByClassName('tab-button');
-            const tabContents = document.getElementsByClassName('tab-content');
-        
-            // Hide all tab contents and remove the 'active' class from tab buttons
-            for (let i = 0; i < tabContents.length; i++) {
-                tabContents[i].classList.remove('active');
-                tabButtons[i].classList.remove('active');
-            }
-        
-            // Show the selected tab content and add the 'active' class to the button
-            document.getElementById(tabName).classList.add('active');
-            for (const element of tabButtons) {
-                if (element.getAttribute('onclick') === `openTab('${tabName}')`) {
-                    element.classList.add('active');
-                }
-            }
-        }
-        
-        document.addEventListener('DOMContentLoaded', function() {
-            openTab('tab1'); // Call the function to open the first tab after the page has loaded
-        });
-        
-        
+		function openTab(tabName) {
+			// Get all tab buttons and tab contents
+			const tabButtons = document.getElementsByClassName('tab-button');
+			const tabContents = document.getElementsByClassName('tab-content');
+
+			// Hide all tab contents and remove the 'active' class from tab buttons
+			for (let i = 0; i < tabContents.length; i++) {
+				tabContents[i].classList.remove('active');
+				tabButtons[i].classList.remove('active');
+			}
+
+			// Show the selected tab content and add the 'active' class to the button
+			document.getElementById(tabName).classList.add('active');
+			for (const element of tabButtons) {
+				if (element.getAttribute('onclick') === `openTab('${tabName}')`) {
+					element.classList.add('active');
+				}
+			}
+		}
+
+		document.addEventListener('DOMContentLoaded', function () {
+			openTab('tab1'); // Call the function to open the first tab after the page has loaded
+		});
+
+
 	</script>
 </body>
 

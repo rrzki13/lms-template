@@ -7,11 +7,11 @@
     <meta content="ie=edge" http-equiv="x-ua-compatible" />
     <meta content="Loyalty Management System - SHIBLY" name="description" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <link href="favicon.png" rel="shortcut icon" />
+
     <link href="apple-touch-icon.png" rel="apple-touch-icon" />
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css" />
     <link href="vendors/css/select2.min.css" rel="stylesheet" />
-    <link href="vendors/bower_components/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" />
+    <link href="vendors\css\daterangepicker.css" rel="stylesheet" />
     <link href="vendors/css/dropzone.css" rel="stylesheet" />
     <link href="vendors/css/dataTables.bootstrap.min.css" rel="stylesheet" />
     <link href="vendors/css/fullcalendar.min.css" rel="stylesheet" />
@@ -650,43 +650,47 @@
                 <div class="content-i">
                     <div class="content-box">
                         <div class="row">
-                            
+
                             <div class="col-sm-12">
                                 <div class="element-wrapper">
                                     <h6 class="element-header">Campaign Data</h6>
                                     <div class="element-box">
                                         <form>
-                                          <div class="row">
-                                            <div class="col-sm-3">
-                                              <div class="form-group">
-                                                <label for=""> Date</label><input class="form-control"  type="datetime-local">
-                                              </div>
+                                            <div class="row">
+                                                <div class="col-sm-3">
+                                                    <div class="form-group">
+                                                        <label for=""> Date</label><input class="form-control"
+                                                            type="datetime-local">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="form-group">
+                                                        <label for="">Campaign Name</label><input class="form-control"
+                                                            type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="form-group">
+                                                        <label for=""> Campaign Type</label><input class="form-control"
+                                                            type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="form-group">
+                                                        <label for="">Create By</label><input class="form-control"
+                                                            placeholder="Password" type="text">
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="col-sm-3">
-                                              <div class="form-group">
-                                                <label for="">Campaign Name</label><input class="form-control" type="text">
-                                              </div>
+                                            <div class="form-buttons-w">
+                                                <div class="d-flex justify-content-end">
+                                                    <button class="btn btn-light" type="submit"> Export</button>
+                                                    <button class="btn btn-light" type="submit"> Reset</button>
+                                                    <button class="btn btn-primary" type="submit"> Query</button>
+                                                </div>
                                             </div>
-                                            <div class="col-sm-3">
-                                              <div class="form-group">
-                                                <label for=""> Campaign Type</label><input class="form-control" type="text">
-                                              </div>
-                                            </div>
-                                            <div class="col-sm-3">
-                                              <div class="form-group">
-                                                <label for="">Create By</label><input class="form-control" placeholder="Password" type="text">
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="form-buttons-w">
-                                            <div class="d-flex justify-content-end">
-                                                <button class="btn btn-light" type="submit"> Export</button>
-                                                <button class="btn btn-light" type="submit"> Reset</button>
-                                                <button class="btn btn-primary" type="submit"> Query</button>
-                                            </div>
-                                          </div>
                                         </form>
-                                      </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-sm-12">
@@ -699,47 +703,47 @@
                                         END - Controls Above Table
                                         -------------------->
                                         <div class="table-responsive">
-                                          <!--------------------
+                                            <!--------------------
                                           START - Basic Table
                                           -------------------->
-                                          <table class="table table-lightborder">
-                                            <thead>
-                                              <tr>
-                                                <th>
-                                                  Campaign Name
-                                                </th>
-                                                <th>
-                                                  Campaign Code
-                                                </th>
-                                                <th>
-                                                  Start Time
-                                                </th>
-                                                <th >
-                                                  End Time
-                                                </th>
-                                                <th >
-                                                  Total Reach Users
-                                                </th>
-                                                <th >
-                                                  Total Clicks
-                                                </th>
-                                                <th >
-                                                  Total Check Out
-                                                </th>
-                                                <th >
-                                                  Order Quantity
-                                                </th>
-                                                <th >
-                                                  Order Taken Users
-                                                </th>
-                                              </tr>
-                                            </thead>
-                                          </table>
-                                          <!--------------------
+                                            <table class="table table-lightborder">
+                                                <thead>
+                                                    <tr>
+                                                        <th>
+                                                            Campaign Name
+                                                        </th>
+                                                        <th>
+                                                            Campaign Code
+                                                        </th>
+                                                        <th>
+                                                            Start Time
+                                                        </th>
+                                                        <th>
+                                                            End Time
+                                                        </th>
+                                                        <th>
+                                                            Total Reach Users
+                                                        </th>
+                                                        <th>
+                                                            Total Clicks
+                                                        </th>
+                                                        <th>
+                                                            Total Check Out
+                                                        </th>
+                                                        <th>
+                                                            Order Quantity
+                                                        </th>
+                                                        <th>
+                                                            Order Taken Users
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                            </table>
+                                            <!--------------------
                                           END - Basic Table
                                           -------------------->
                                         </div>
-                                      </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-sm-12">
