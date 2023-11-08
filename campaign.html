@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Loyalty Management System - SHIBLY</title>
+    <meta charset="utf-8" />
+    <meta content="ie=edge" http-equiv="x-ua-compatible" />
+    <meta content="Loyalty Management System - SHIBLY" name="description" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link href="favicon.png" rel="shortcut icon" />
+    <link href="apple-touch-icon.png" rel="apple-touch-icon" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css" />
+    <link href="vendors/css/select2.min.css" rel="stylesheet" />
+    <link href="vendors/bower_components/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" />
+    <link href="vendors/css/dropzone.css" rel="stylesheet" />
+    <link href="vendors/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+    <link href="vendors/css/fullcalendar.min.css" rel="stylesheet" />
+    <link href="vendors/css/perfect-scrollbar.min.css" rel="stylesheet" />
+    <link href="vendors/css/slick.css" rel="stylesheet" />
+    <link href="css/main.css?version=4.5.0" rel="stylesheet" />
+</head>
+
+<body class="full-screen with-content-panel menu-position-side menu-side-left">
+    <div class="all-wrapper with-side-panel solid-bg-all">
+        <div class="top-bar color-scheme-light">
+            <div class="mm-logo-buttons-w p-3">
+                <a class="mm-logo" href="index.html">
+                    <img src="img/sts.png" height="40" />
+                </a>
+            </div>
+            <div class="">
+                <button class="btn btn-primary mr-2"><i class="os-icon os-icon-zap mr-2"></i>Create</button>
+                <button class="btn btn-primary"><i class="os-icon os-icon-airplay mr-2"></i>Maintenance</button>
+            </div>
+            <div class="top-menu-controls">
+                <div class="messages-notifications os-dropdown-trigger os-dropdown-position-left">
+                    <i class="os-icon os-icon-log-in" style="transform: rotate(90deg); display: inline-block;"></i>
+                </div>
+                <div class="messages-notifications os-dropdown-trigger os-dropdown-position-left">
+                    <i class="os-icon os-icon-grid-18"></i>
+                </div>
+                <div class="top-icon top-settings os-dropdown-trigger os-dropdown-position-left">
+                    <i class="os-icon os-icon-target"></i>
+                    <div class="os-dropdown">
+                        <div class="icon-w">
+                            <i class="os-icon os-icon-ui-46"></i>
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="users_profile_small.html"><span>English</span></a>
+                            </li>
+                            <li>
+                                <a href="users_profile_small.html"><span>Indonesian</span></a>
+                            </li>
+                    </div>
+                </div>
+                <div class="top-icon top-settings os-dropdown-trigger os-dropdown-position-left">
+                    <i class="os-icon os-icon-ui-46"></i>
+                    <div class="os-dropdown">
+                        <div class="icon-w">
+                            <i class="os-icon os-icon-ui-46"></i>
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="users_profile_small.html"><i class="os-icon os-icon-ui-49"></i><span>DMC
+                                        Portal</span></a>
+                            </li>
+                            <li>
+                                <a href="users_profile_small.html"><i class="os-icon os-icon-grid-10"></i><span>Trail
+                                        DMC Portal</span></a>
+                            </li>
+                    </div>
+                </div>
+                <div class="logged-user-w">
+                    <div class="logged-user-i">
+                        <div class="avatar-w">
+                            <img alt="" src="img/avatar1.jpg" />
+                        </div>
+                        <div class="logged-user-menu color-style-bright">
+                            <div class="logged-user-avatar-info">
+                                <div class="avatar-w">
+                                    <img alt="" src="img/avatar1.jpg" />
+                                </div>
+                                <div class="logged-user-info-w">
+                                    <div class="logged-user-name">Maria Gomez</div>
+                                    <div class="logged-user-role">Administrator</div>
+                                </div>
+                            </div>
+                            <div class="bg-icon">
+                                <i class="os-icon os-icon-wallet-loaded"></i>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a href="apps_email.html"><i class="os-icon os-icon-unlock"></i><span>Change
+                                            Password</span></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="os-icon os-icon-signs-11"></i><span>Logout</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layout-w">
+            <div class="menu-mobile menu-activated-on-click color-scheme-light">
+                <div class="mm-logo-buttons-w">
+                    <div class="mm-buttons">
+                        <div class="content-panel-open">
+                            <div class="os-icon os-icon-grid-circles"></div>
+                        </div>
+                        <div class="mobile-menu-trigger">
+                            <div class="os-icon os-icon-hamburger-menu-1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-and-user">
+                    <div class="logged-user-w">
+                        <div class="avatar-w">
+                            <img alt="" src="img/avatar1.jpg" />
+                        </div>
+                        <div class="logged-user-info-w">
+                            <div class="logged-user-name">Maria Gomez</div>
+                            <div class="logged-user-role">Administrator</div>
+                        </div>
+                    </div>
+                    <ul class="main-menu">
+                        <li class="has-sub-menu">
+                            <a href="index.html">
+                                <div class="icon-w">
+                                    <div class="os-icon os-icon-layout"></div>
+                                </div>
+                                <span>Dashboard</span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="index.html">Dashboard 1</a>
+                                </li>
+                                <li>
+                                    <a href="apps_crypto.html">Crypto Dashboard
+                                        <strong class="badge badge-danger">Hot</strong></a>
+                                </li>
+                                <li>
+                                    <a href="apps_support_dashboard.html">Dashboard 3</a>
+                                </li>
+                                <li>
+                                    <a href="apps_projects.html">Dashboard 4</a>
+                                </li>
+                                <li>
+                                    <a href="apps_bank.html">Dashboard 5</a>
+                                </li>
+                                <li>
+                                    <a href="layouts_menu_top_image.html">Dashboard 6</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-sub-menu">
+                            <a href="layouts_menu_top_image.html">
+                                <div class="icon-w">
+                                    <div class="os-icon os-icon-layers"></div>
+                                </div>
+                                <span>Menu Styles</span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="layouts_menu_side_full.html">Side Menu Light</a>
+                                </li>
+                                <li>
+                                    <a href="layouts_menu_side_full_dark.html">Side Menu Dark</a>
+                                </li>
+                                <li>
+                                    <a href="layouts_menu_side_transparent.html">Side Menu Transparent
+                                        <strong class="badge badge-danger">New</strong></a>
+                                </li>
+                                <li>
+                                    <a href="apps_pipeline.html">Side &amp; Top Dark</a>
+                                </li>
+                                <li>
+                                    <a href="apps_projects.html">Side &amp; Top</a>
+                                </li>
+                                <li>
+                                    <a href="layouts_menu_side_mini.html">Mini Side Menu</a>
+                                </li>
+                                <li>
+                                    <a href="layouts_menu_side_mini_dark.html">Mini Menu Dark</a>
+                                </li>
+                                <li>
+                                    <a href="layouts_menu_side_compact.html">Compact Side Menu</a>
+                                </li>
+                                <li>
+                                    <a href="layouts_menu_side_compact_dark.html">Compact Menu Dark</a>
+                                </li>
+                                <li>
+                                    <a href="layouts_menu_right.html">Right Menu</a>
+                                </li>
+                                <li>
+                                    <a href="layouts_menu_top.html">Top Menu Light</a>
+                                </li>
+                                <li>
+                                    <a href="layouts_menu_top_dark.html">Top Menu Dark</a>
+                                </li>
+                                <li>
+                                    <a href="layouts_menu_top_image.html">Top Menu Image <strong
+                                            class="badge badge-danger">New</strong></a>
+                                </li>
+                                <li>
+                                    <a href="layouts_menu_sub_style_flyout.html">Sub Menu Flyout</a>
+                                </li>
+                                <li>
+                                    <a href="layouts_menu_sub_style_flyout_dark.html">Sub Flyout Dark</a>
+                                </li>
+                                <li>
+                                    <a href="layouts_menu_sub_style_flyout_bright.html">Sub Flyout Bright</a>
+                                </li>
+                                <li>
+                                    <a href="layouts_menu_side_compact_click.html">Menu Inside Click</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-sub-menu">
+                            <a href="apps_bank.html">
+                                <div class="icon-w">
+                                    <div class="os-icon os-icon-package"></div>
+                                </div>
+                                <span>Applications</span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="apps_email.html">Email Application</a>
+                                </li>
+                                <li>
+                                    <a href="apps_support_dashboard.html">Support Dashboard</a>
+                                </li>
+                                <li>
+                                    <a href="apps_support_index.html">Tickets Index</a>
+                                </li>
+                                <li>
+                                    <a href="apps_crypto.html">Crypto Dashboard
+                                        <strong class="badge badge-danger">New</strong></a>
+                                </li>
+                                <li>
+                                    <a href="apps_projects.html">Projects List</a>
+                                </li>
+                                <li>
+                                    <a href="apps_bank.html">Banking <strong class="badge badge-danger">New</strong></a>
+                                </li>
+                                <li>
+                                    <a href="apps_full_chat.html">Chat Application</a>
+                                </li>
+                                <li>
+                                    <a href="apps_todo.html">To Do Application
+                                        <strong class="badge badge-danger">New</strong></a>
+                                </li>
+                                <li>
+                                    <a href="misc_chat.html">Popup Chat</a>
+                                </li>
+                                <li>
+                                    <a href="apps_pipeline.html">CRM Pipeline</a>
+                                </li>
+                                <li>
+                                    <a href="rentals_index_grid.html">Property Listing
+                                        <strong class="badge badge-danger">New</strong></a>
+                                </li>
+                                <li>
+                                    <a href="misc_calendar.html">Calendar</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-sub-menu">
+                            <a href="#">
+                                <div class="icon-w">
+                                    <div class="os-icon os-icon-file-text"></div>
+                                </div>
+                                <span>Pages</span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="misc_invoice.html">Invoice</a>
+                                </li>
+                                <li>
+                                    <a href="ecommerce_order_info.html">Order Info <strong
+                                            class="badge badge-danger">New</strong></a>
+                                </li>
+                                <li>
+                                    <a href="rentals_index_grid.html">Property Listing
+                                        <strong class="badge badge-danger">New</strong></a>
+                                </li>
+                                <li>
+                                    <a href="misc_charts.html">Charts</a>
+                                </li>
+                                <li>
+                                    <a href="auth_login.html">Login</a>
+                                </li>
+                                <li>
+                                    <a href="auth_register.html">Register</a>
+                                </li>
+                                <li>
+                                    <a href="auth_lock.html">Lock Screen</a>
+                                </li>
+                                <li>
+                                    <a href="misc_pricing_plans.html">Pricing Plans</a>
+                                </li>
+                                <li>
+                                    <a href="misc_error_404.html">Error 404</a>
+                                </li>
+                                <li>
+                                    <a href="misc_error_500.html">Error 500</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-sub-menu">
+                            <a href="#">
+                                <div class="icon-w">
+                                    <div class="os-icon os-icon-life-buoy"></div>
+                                </div>
+                                <span>UI Kit</span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="uikit_modals.html">Modals <strong
+                                            class="badge badge-danger">New</strong></a>
+                                </li>
+                                <li>
+                                    <a href="uikit_alerts.html">Alerts</a>
+                                </li>
+                                <li>
+                                    <a href="uikit_grid.html">Grid</a>
+                                </li>
+                                <li>
+                                    <a href="uikit_progress.html">Progress</a>
+                                </li>
+                                <li>
+                                    <a href="uikit_popovers.html">Popover</a>
+                                </li>
+                                <li>
+                                    <a href="uikit_tooltips.html">Tooltips</a>
+                                </li>
+                                <li>
+                                    <a href="uikit_buttons.html">Buttons</a>
+                                </li>
+                                <li>
+                                    <a href="uikit_dropdowns.html">Dropdowns</a>
+                                </li>
+                                <li>
+                                    <a href="uikit_typography.html">Typography</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-sub-menu">
+                            <a href="#">
+                                <div class="icon-w">
+                                    <div class="os-icon os-icon-mail"></div>
+                                </div>
+                                <span>Emails</span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="emails_welcome.html">Welcome Email</a>
+                                </li>
+                                <li>
+                                    <a href="emails_order.html">Order Confirmation</a>
+                                </li>
+                                <li>
+                                    <a href="emails_payment_due.html">Payment Due</a>
+                                </li>
+                                <li>
+                                    <a href="emails_forgot.html">Forgot Password</a>
+                                </li>
+                                <li>
+                                    <a href="emails_activate.html">Activate Account</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-sub-menu">
+                            <a href="#">
+                                <div class="icon-w">
+                                    <div class="os-icon os-icon-users"></div>
+                                </div>
+                                <span>Users</span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="users_profile_big.html">Big Profile</a>
+                                </li>
+                                <li>
+                                    <a href="users_profile_small.html">Compact Profile</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-sub-menu">
+                            <a href="#">
+                                <div class="icon-w">
+                                    <div class="os-icon os-icon-edit-32"></div>
+                                </div>
+                                <span>Forms</span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="forms_regular.html">Regular Forms</a>
+                                </li>
+                                <li>
+                                    <a href="forms_validation.html">Form Validation</a>
+                                </li>
+                                <li>
+                                    <a href="forms_wizard.html">Form Wizard</a>
+                                </li>
+                                <li>
+                                    <a href="forms_uploads.html">File Uploads</a>
+                                </li>
+                                <li>
+                                    <a href="forms_wisiwig.html">Wisiwig Editor</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-sub-menu">
+                            <a href="#">
+                                <div class="icon-w">
+                                    <div class="os-icon os-icon-grid"></div>
+                                </div>
+                                <span>Tables</span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="tables_regular.html">Regular Tables</a>
+                                </li>
+                                <li>
+                                    <a href="tables_datatables.html">Data Tables</a>
+                                </li>
+                                <li>
+                                    <a href="tables_editable.html">Editable Tables</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-sub-menu">
+                            <a href="#">
+                                <div class="icon-w">
+                                    <div class="os-icon os-icon-zap"></div>
+                                </div>
+                                <span>Icons</span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="icon_fonts_simple_line_icons.html">Simple Line Icons</a>
+                                </li>
+                                <li>
+                                    <a href="icon_fonts_feather.html">Feather Icons</a>
+                                </li>
+                                <li>
+                                    <a href="icon_fonts_themefy.html">Themefy Icons</a>
+                                </li>
+                                <li>
+                                    <a href="icon_fonts_picons_thin.html">Picons Thin</a>
+                                </li>
+                                <li>
+                                    <a href="icon_fonts_dripicons.html">Dripicons</a>
+                                </li>
+                                <li>
+                                    <a href="icon_fonts_eightyshades.html">Eightyshades</a>
+                                </li>
+                                <li>
+                                    <a href="icon_fonts_entypo.html">Entypo</a>
+                                </li>
+                                <li>
+                                    <a href="icon_fonts_font_awesome.html">Font Awesome</a>
+                                </li>
+                                <li>
+                                    <a href="icon_fonts_foundation_icon_font.html">Foundation Icon Font</a>
+                                </li>
+                                <li>
+                                    <a href="icon_fonts_metrize_icons.html">Metrize Icons</a>
+                                </li>
+                                <li>
+                                    <a href="icon_fonts_picons_social.html">Picons Social</a>
+                                </li>
+                                <li>
+                                    <a href="icon_fonts_batch_icons.html">Batch Icons</a>
+                                </li>
+                                <li>
+                                    <a href="icon_fonts_dashicons.html">Dashicons</a>
+                                </li>
+                                <li>
+                                    <a href="icon_fonts_typicons.html">Typicons</a>
+                                </li>
+                                <li>
+                                    <a href="icon_fonts_weather_icons.html">Weather Icons</a>
+                                </li>
+                                <li>
+                                    <a href="icon_fonts_light_admin.html">Light Admin</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="menu-w selected-menu-color-light menu-activated-on-hover menu-has-selected-link color-scheme-dark color-style-bright sub-menu-color-bright menu-position-side menu-side-left menu-layout-mini sub-menu-style-flyout">
+                <h1 class="menu-page-header">Page Header</h1>
+                <ul class="main-menu">
+                    <li class="sub-header">
+                        <span>Layouts</span>
+                    </li>
+                    <li class="selected has-sub-menu">
+                        <a href="index.html">
+                            <div class="icon-w">
+                                <div class="os-icon os-icon-grid-squares-22"></div>
+                            </div>
+                            <span>Dashboard</span>
+                        </a>
+                        <div class="sub-menu-w">
+                            <div class="sub-menu-header">Dashboard</div>
+                            <div class="sub-menu-icon">
+                                <i class="os-icon os-icon-grid-squares-22"></i>
+                            </div>
+                            <div class="sub-menu-i">
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="index.html">Overall Dashboard</a>
+                                    </li>
+                                    <li>
+                                        <a href="campaign.html">Campaign Dashboard</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="selected has-sub-menu">
+                        <a href="index.html">
+                            <div class="icon-w">
+                                <div class="os-icon os-icon-layers"></div>
+                            </div>
+                            <span>Management</span>
+                        </a>
+                        <div class="sub-menu-w">
+                            <div class="sub-menu-header">Management</div>
+                            <div class="sub-menu-icon">
+                                <i class="os-icon os-icon-layers"></i>
+                            </div>
+                            <div class="sub-menu-i">
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="index.html">Campaign Canvas</a>
+                                    </li>
+                                    <li>
+                                        <a href="index.html">Approval Management</a>
+                                    </li>
+                                    <li>
+                                        <a href="index.html">Template Management</a>
+                                    </li>
+                                    <li>
+                                        <a href="index.html">Project Management</a>
+                                    </li>
+                                    <li>
+                                        <a href="index.html">Reward Management</a>
+                                    </li>
+                                    <li>
+                                        <a href="index.html">Lottery Management</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="selected has-sub-menu">
+                        <a href="index.html">
+                            <div class="icon-w">
+                                <div class="os-icon os-icon-home-10"></div>
+                            </div>
+                            <span>Monitoring</span>
+                        </a>
+                        <div class="sub-menu-w">
+                            <div class="sub-menu-header">Monitoring</div>
+                            <div class="sub-menu-icon">
+                                <i class="os-icon os-icon-home-10"></i>
+                            </div>
+                            <div class="sub-menu-i">
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="index.html">Campaign Monitor</a>
+                                    </li>
+                                    <li>
+                                        <a href="index.html">Campaign Calendar</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="selected has-sub-menu">
+                        <a href="index.html">
+                            <div class="icon-w">
+                                <div class="os-icon os-icon-agenda-1"></div>
+                            </div>
+                            <span>Frequency</span>
+                        </a>
+                        <div class="sub-menu-w">
+                            <div class="sub-menu-header">Frequency</div>
+                            <div class="sub-menu-icon">
+                                <i class="os-icon os-agenda-1"></i>
+                            </div>
+                            <div class="sub-menu-i">
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="index.html">Frequency Management</a>
+                                    </li>
+                                    <li>
+                                        <a href="index.html">Public Holiday Configuration</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="selected has-sub-menu">
+                        <a href="index.html">
+                            <div class="icon-w">
+                                <div class="os-icon os-icon-user-plus"></div>
+                            </div>
+                            <span>User</span>
+                        </a>
+                        <div class="sub-menu-w">
+                            <div class="sub-menu-header">User</div>
+                            <div class="sub-menu-icon">
+                                <i class="os-icon os-user-plus"></i>
+                            </div>
+                            <div class="sub-menu-i">
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="index.html">User Tag Management</a>
+                                    </li>
+                                    <li>
+                                        <a href="index.html">User Group Management</a>
+                                    </li>
+                                    <li>
+                                        <a href="index.html">User Import Task Management</a>
+                                    </li>
+                                    <li>
+                                        <a href="index.html">Global Group Management</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--------------------
+        END - Main Menu
+        -------------------->
+            <div class="content-w">
+                <div class="content-panel-toggler">
+                    <i class="os-icon os-icon-grid-squares-22"></i><span>Sidebar</span>
+                </div>
+                <div class="content-i">
+                    <div class="content-box">
+                        <div class="row">
+                            
+                            <div class="col-sm-12">
+                                <div class="element-wrapper">
+                                    <h6 class="element-header">Campaign Data</h6>
+                                    <div class="element-box">
+                                        <form>
+                                          <div class="row">
+                                            <div class="col-sm-3">
+                                              <div class="form-group">
+                                                <label for=""> Date</label><input class="form-control"  type="datetime-local">
+                                              </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                              <div class="form-group">
+                                                <label for="">Campaign Name</label><input class="form-control" type="text">
+                                              </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                              <div class="form-group">
+                                                <label for=""> Campaign Type</label><input class="form-control" type="text">
+                                              </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                              <div class="form-group">
+                                                <label for="">Create By</label><input class="form-control" placeholder="Password" type="text">
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="form-buttons-w">
+                                            <div class="d-flex justify-content-end">
+                                                <button class="btn btn-light" type="submit"> Export</button>
+                                                <button class="btn btn-light" type="submit"> Reset</button>
+                                                <button class="btn btn-primary" type="submit"> Query</button>
+                                            </div>
+                                          </div>
+                                        </form>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="element-wrapper">
+                                    <div class="element-box">
+                                        <!--------------------
+                                        START - Controls Above Table
+                                        -------------------->
+                                        <!--------------------
+                                        END - Controls Above Table
+                                        -------------------->
+                                        <div class="table-responsive">
+                                          <!--------------------
+                                          START - Basic Table
+                                          -------------------->
+                                          <table class="table table-lightborder">
+                                            <thead>
+                                              <tr>
+                                                <th>
+                                                  Campaign Name
+                                                </th>
+                                                <th>
+                                                  Campaign Code
+                                                </th>
+                                                <th>
+                                                  Start Time
+                                                </th>
+                                                <th >
+                                                  End Time
+                                                </th>
+                                                <th >
+                                                  Total Reach Users
+                                                </th>
+                                                <th >
+                                                  Total Clicks
+                                                </th>
+                                                <th >
+                                                  Total Check Out
+                                                </th>
+                                                <th >
+                                                  Order Quantity
+                                                </th>
+                                                <th >
+                                                  Order Taken Users
+                                                </th>
+                                              </tr>
+                                            </thead>
+                                          </table>
+                                          <!--------------------
+                                          END - Basic Table
+                                          -------------------->
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="element-wrapper">
+                                    <h6 class="element-header">Core Data</h6>
+                                    <div class="element-content">
+                                        <div class="row">
+                                            <div class="col-sm-12 col-xxxl-3">
+                                                <div class="element-box el-tablo">
+                                                    <div class="row">
+                                                        <div class="col-sm-2 col-xxxl-2">
+                                                            <div class="el-tablo-cell right">
+                                                                <div class="label">Revenue</div>
+                                                                <div class="value">0.00</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-2 col-xxxl-2">
+                                                            <div class="el-tablo-cell right">
+                                                                <div class="label">Order Quantity </div>
+                                                                <div class="value">0</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-2 col-xxxl-2">
+                                                            <div class="el-tablo-cell right">
+                                                                <div class="label">Reach User </div>
+                                                                <div class="value">0</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-2 col-xxxl-2">
+                                                            <div class="el-tablo-cell right">
+                                                                <div class="label">Campaigns </div>
+                                                                <div class="value">0</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-2 col-xxxl-2">
+                                                            <div class="el-tablo-cell right">
+                                                                <div class="label">CTR </div>
+                                                                <div class="value">0.00%</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-2 col-xxxl-2">
+                                                            <div class="el-tablo-cell right">
+                                                                <div class="label">ARPPU </div>
+                                                                <div class="value">0</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6 col-xxxl-6">
+                                <div class="element-wrapper">
+                                    <h6 class="element-header">Channel Overview</h6>
+                                    <div class="element-content">
+                                        <div class="row">
+                                            <div class="col-sm-12 col-xxxl-3">
+                                                <div class="element-box el-tablo">
+                                                    <div class="row">
+                                                        <div class="col-sm-3 col-xxxl-3">
+                                                            <div class="el-tablo-cell right">
+                                                                <div class="label" style="font-size: 0.5rem!important;">
+                                                                    Outbound </div>
+                                                                <div class="value">0</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-3 col-xxxl-3">
+                                                            <div class="el-tablo-cell right">
+                                                                <div class="label" style="font-size: 0.5rem!important;">
+                                                                    Inbound </div>
+                                                                <div class="value">0</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-3 col-xxxl-3">
+                                                            <div class="el-tablo-cell right">
+                                                                <div class="label" style="font-size: 0.5rem!important;">
+                                                                    Outbound Reach User</div>
+                                                                <div class="value">0</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-3 col-xxxl-3">
+                                                            <div class="el-tablo-cell right">
+                                                                <div class="label" style="font-size: 0.5rem!important;">
+                                                                    Outbound Reach User</div>
+                                                                <div class="value">0</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 d-xxxl-6">
+                                <div class="element-wrapper">
+                                    <h6 class="element-header">Conversion Funnel</h6>
+                                    <div class="element-box">
+                                        <div class="el-chart-w">
+                                            <div class="chartjs-size-monitor">
+                                                <div class="chartjs-size-monitor-expand">
+                                                    <div class=""></div>
+                                                </div>
+                                                <div class="chartjs-size-monitor-shrink">
+                                                    <div class=""></div>
+                                                </div>
+                                            </div>
+                                            <canvas height="261" id="barChart1" width="543"
+                                                style="display: block; height: 174px; width: 362px;"
+                                                class="chartjs-render-monitor"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--END - Top Selling Chart-->
+                            </div>
+                            <div class="col-sm-12 d-xxxl-12">
+                                <div class="element-wrapper">
+                                    <h6 class="element-header">Conversion Events </h6>
+                                    <div class="element-box">
+                                        <div class="el-chart-w">
+                                            <div class="chartjs-size-monitor">
+                                                <div class="chartjs-size-monitor-expand">
+                                                    <div class=""></div>
+                                                </div>
+                                                <div class="chartjs-size-monitor-shrink">
+                                                    <div class=""></div>
+                                                </div>
+                                            </div>
+                                            <canvas height="261" id="barChart1" width="543"
+                                                style="display: block; height: 174px; width: 362px;"
+                                                class="chartjs-render-monitor"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--END - Top Selling Chart-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="display-type"></div>
+    </div>
+    <script src="vendors/js/jquery.min.js"></script>
+    <script src="vendors/js/popper.min.js"></script>
+    <script src="vendors/js/moment.js"></script>
+    <script src="vendors/js/Chart.min.js"></script>
+    <script src="vendors/js/select2.full.min.js"></script>
+    <script src="vendors/js/jquery.barrating.min.js"></script>
+    <script src="vendors/js/ckeditor.js"></script>
+    <script src="vendors/js/validator.min.js"></script>
+    <script src="vendors/js/daterangepicker.js"></script>
+    <script src="vendors/js/ion.rangeSlider.min.js"></script>
+    <script src="vendors/js/dropzone.js"></script>
+    <script src="vendors/js/mindmup-editabletable.js"></script>
+    <script src="vendors/js/jquery.dataTables.min.js"></script>
+    <script src="vendors/js/dataTables.bootstrap.min.js"></script>
+    <script src="vendors/js/fullcalendar.min.js"></script>
+    <script src="vendors/js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="vendors/js/tether.min.js"></script>
+    <script src="vendors/js/slick.min.js"></script>
+    <script src="vendors/js/util.js"></script>
+    <script src="vendors/js/alert.js"></script>
+    <script src="vendors/js/button.js"></script>
+    <script src="vendors/js/carousel.js"></script>
+    <script src="vendors/js/collapse.js"></script>
+    <script src="vendors/js/dropdown.js"></script>
+    <script src="vendors/js/modal.js"></script>
+    <script src="vendors/js/tab.js"></script>
+    <script src="vendors/js/tooltip.js"></script>
+    <script src="vendors/js/popover.js"></script>
+    <script src="js/demo_customizer.js?version=4.5.0"></script>
+    <script src="js/main.js?version=4.5.0"></script>
+    <script>
+        ; (function (i, s, o, g, r, a, m) {
+            i["GoogleAnalyticsObject"] = r
+                ; (i[r] =
+                    i[r] ||
+                    function () {
+                        ; (i[r].q = i[r].q || []).push(arguments)
+                    }),
+                    (i[r].l = 1 * new Date())
+                ; (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0])
+            a.async = 1
+            a.src = g
+            m.parentNode.insertBefore(a, m)
+        })(window, document, "script", "https://www.google-analytics.com/analytics.js", "ga")
+
+        ga("create", "UA-XXXXXXXX-9", "auto")
+        ga("send", "pageview")
+    </script>
+</body>
+
+</html>
