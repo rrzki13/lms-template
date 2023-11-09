@@ -18,6 +18,8 @@
     <link href="vendors/css/perfect-scrollbar.min.css" rel="stylesheet" />
     <link href="vendors/css/slick.css" rel="stylesheet" />
     <link href="css/main.css?version=4.5.0" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/select2.css">
 </head>
 
 <body class="full-screen with-content-panel menu-position-side menu-side-left">
@@ -656,137 +658,225 @@
                                     <form>
                                         <div class="row">
                                             <div class="col-sm-4">
-                                                <div class="form-group"><input class="form-control form-control-sm"
-                                                        type="text" placeholder="Activity Code...">
+                                                <div
+                                                    class="form-group d-flex justify-content-between align-items-center">
+                                                    <label class="form-label" for="" style="width: 30%;">Activity
+                                                        Code</label>
+                                                    <input class="form-control" placeholder="Please Input" type="text"
+                                                        style="width: 70%;">
                                                 </div>
                                             </div>
                                             <div class="col-sm-4">
-                                                <div class="form-group"><input class="form-control form-control-sm"
-                                                        type="text" placeholder="Activity Name...">
+                                                <div
+                                                    class="form-group d-flex justify-content-between align-items-center">
+                                                    <label class="form-label" for="" style="width: 30%;">Activity
+                                                        Name</label>
+                                                    <input class="form-control" placeholder="Please Input" type="text"
+                                                        style="width: 70%;">
                                                 </div>
                                             </div>
                                             <div class="col-sm-4">
-                                                <div class="form-group"><input class="form-control form-control-sm"
-                                                        type="text" placeholder="Activity Category...">
+                                                <div
+                                                    class="form-group d-flex justify-content-between align-items-center">
+                                                    <label class="form-label" for="" style="width: 30%;">Activity
+                                                        Category</label>
+                                                    <select class="form-control select2" style="width: 70%;">
+                                                        <option>Select State</option>
+                                                        <option>Refferal</option>
+                                                        <option>Raffle Game</option>
+                                                        <option>Grid Lucky Draw Game</option>
+                                                        <option>Wheel Game</option>
+                                                        <option>Daily Checkame</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <div
+                                                    class="form-group d-flex justify-content-between align-items-center">
+                                                    <label class="form-label" for="">Activity
+                                                        Effective Period</label>
+                                                    <input class="form-control form-control-sm w-100 daterange"
+                                                        type="text" placeholder="Select State" style="width: 70%;">
                                                 </div>
                                             </div>
                                             <div class="col-sm-4">
-                                                <div class="form-group"><input class="form-control form-control-sm"
-                                                        type="datetime-local">
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <div class="form-group"><input class="form-control form-control-sm"
-                                                        type="datetime-local">
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <div class="form-group"><input class="form-control form-control-sm"
-                                                        type="text" placeholder="Status...">
+                                                <div
+                                                    class="form-group d-flex justify-content-between align-items-center">
+                                                    <label class="form-label" for="" style="width: 30%;">Status</label>
+                                                    <select class="form-control select2" style="width: 70%;">
+                                                        <option>Select State</option>
+                                                        <option>Draft</option>
+                                                        <option>Finished</option>
+                                                        <option>Not Start</option>
+                                                        <option>On Going</option>
+                                                        <option>Suspended</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
                                     </form>
                                     <div class="d-flex justify-content-end">
-                                        <button class="btn btn-sm btn-primary">Query</button>
-                                        <button class="btn btn-sm btn-light">Reset</button>
+                                        <button class="btn btn-primary">Query</button>
+                                        <button class="btn btn-light">Reset</button>
                                     </div>
-                                    <div class="mt-2 mb-4">
-                                        <button class="btn btn-sm btn-primary">New </button>
+                                </div>
+
+                                <div class="element-box mt-3">
+
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <button class="btn btn-primary">
+                                                <i class="os-icon os-icon-plus"></i>
+                                                <span class="ml-2">New Lottery</span>
+                                            </button>
+                                        </div>
                                     </div>
 
-                                    <!--------------------
-                                            START - Controls Above Table
-                                            -------------------->
-                                    <!--------------------
-                                            END - Controls Above Table
-                                            -------------------->
-                                    <div class="table-responsive">
-                                        <!--------------------
-                                              START - Basic Table
-                                              -------------------->
-                                        <table class="table table-lightborder">
-                                            <thead>
-                                                <tr>
-                                                    <th>
-                                                        Reward Name
-                                                    </th>
-                                                    <th>
-                                                        Reward Type
-                                                    </th>
-                                                    <th>
-                                                        Rank
-                                                    </th>
-                                                    <th>
-                                                        Effective Date
-                                                    </th>
-                                                    <th>
-                                                        Expired Date
-                                                    </th>
-                                                    <th>Update Date</th>
-                                                    <th>Status</th>
-                                                    <th>
-                                                        Operation
-                                                    </th>
-
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>Spin the Wheel745</td>
-                                                    <td>Lucky_Draw_745</td>
-                                                    <td>Lucky Draw (Wheel)</td>
-                                                    <td>2022-10-22 00:00:00</td>
-                                                    <td>2025-12-31 00:00:00</td>
-                                                    <td>2023-09-22 10:21:48</td>
-                                                    <td>Suspended</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Spin the Wheel745</td>
-                                                    <td>Lucky_Draw_745</td>
-                                                    <td>Lucky Draw (Wheel)</td>
-                                                    <td>2022-10-22 00:00:00</td>
-                                                    <td>2025-12-31 00:00:00</td>
-                                                    <td>2023-09-22 10:21:48</td>
-                                                    <td>Suspended</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Spin the Wheel745</td>
-                                                    <td>Lucky_Draw_745</td>
-                                                    <td>Lucky Draw (Wheel)</td>
-                                                    <td>2022-10-22 00:00:00</td>
-                                                    <td>2025-12-31 00:00:00</td>
-                                                    <td>2023-09-22 10:21:48</td>
-                                                    <td>Suspended</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Spin the Wheel745</td>
-                                                    <td>Lucky_Draw_745</td>
-                                                    <td>Lucky Draw (Wheel)</td>
-                                                    <td>2022-10-22 00:00:00</td>
-                                                    <td>2025-12-31 00:00:00</td>
-                                                    <td>2023-09-22 10:21:48</td>
-                                                    <td>Suspended</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Spin the Wheel745</td>
-                                                    <td>Lucky_Draw_745</td>
-                                                    <td>Lucky Draw (Wheel)</td>
-                                                    <td>2022-10-22 00:00:00</td>
-                                                    <td>2025-12-31 00:00:00</td>
-                                                    <td>2023-09-22 10:21:48</td>
-                                                    <td>Suspended</td>
-                                                    <td></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <!--------------------
-                                              END - Basic Table
-                                              -------------------->
+                                    <div class="row">
+                                        <div class="col-12 mt-3">
+                                            <div class="table-responsive">
+                                                <table class="table table-lightborder table-stripped">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Activity Name</th>
+                                                            <th>Activity Code</th>
+                                                            <th>Activity Category</th>
+                                                            <th>Effective Date</th>
+                                                            <th>Expired Date</th>
+                                                            <th>Updated Date</th>
+                                                            <th>Status</th>
+                                                            <th>Operation</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><a href="lottery/edit-lottery.html">Spin The Wheel 745</a></td>
+                                                            <td>Lucky_Draw_745</td>
+                                                            <td>Lucky Draw (Wheel)</td>
+                                                            <td>2023-11-07 10:00:00</td>
+                                                            <td>2023-11-07 10:00:00</td>
+                                                            <td>2023-11-07 10:00:00</td>
+                                                            <td>
+                                                                <div class="alert alert-success p-0 text-center m-0">
+                                                                    Ongoing</div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="">Edit</a>|
+                                                                <a href="">Delete</a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="lottery/edit-lottery.html">Spin The Wheel 745</a></td>
+                                                            <td>Lucky_Draw_745</td>
+                                                            <td>Lucky Draw (Wheel)</td>
+                                                            <td>2023-11-07 10:00:00</td>
+                                                            <td>2023-11-07 10:00:00</td>
+                                                            <td>2023-11-07 10:00:00</td>
+                                                            <td>
+                                                                <div class="alert alert-success p-0 text-center m-0">
+                                                                    Ongoing</div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="">Edit</a>|
+                                                                <a href="">Delete</a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="lottery/edit-lottery.html">Spin The Wheel 745</a></td>
+                                                            <td>Lucky_Draw_745</td>
+                                                            <td>Lucky Draw (Wheel)</td>
+                                                            <td>2023-11-07 10:00:00</td>
+                                                            <td>2023-11-07 10:00:00</td>
+                                                            <td>2023-11-07 10:00:00</td>
+                                                            <td>
+                                                                <div class="alert alert-success p-0 text-center m-0">
+                                                                    Ongoing</div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="">Edit</a>|
+                                                                <a href="">Delete</a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="lottery/edit-lottery.html">Spin The Wheel 745</a></td>
+                                                            <td>Lucky_Draw_745</td>
+                                                            <td>Lucky Draw (Wheel)</td>
+                                                            <td>2023-11-07 10:00:00</td>
+                                                            <td>2023-11-07 10:00:00</td>
+                                                            <td>2023-11-07 10:00:00</td>
+                                                            <td>
+                                                                <div class="alert alert-success p-0 text-center m-0">
+                                                                    Ongoing</div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="">Edit</a>|
+                                                                <a href="">Delete</a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="lottery/edit-lottery.html">Spin The Wheel 745</a></td>
+                                                            <td>Lucky_Draw_745</td>
+                                                            <td>Lucky Draw (Wheel)</td>
+                                                            <td>2023-11-07 10:00:00</td>
+                                                            <td>2023-11-07 10:00:00</td>
+                                                            <td>2023-11-07 10:00:00</td>
+                                                            <td>
+                                                              <div class="alert alert-success p-0 text-center m-0">Ongoing</div>
+                                                            </td>
+                                                            <td>
+                                                               <a href="">Edit</a>|
+                                                               <a href="">Delete</a>
+                                                            </td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td><a href="lottery/edit-lottery.html">Spin The Wheel 745</a></td>
+                                                            <td>Lucky_Draw_745</td>
+                                                            <td>Lucky Draw (Wheel)</td>
+                                                            <td>2023-11-07 10:00:00</td>
+                                                            <td>2023-11-07 10:00:00</td>
+                                                            <td>2023-11-07 10:00:00</td>
+                                                            <td>
+                                                              <div class="alert alert-success p-0 text-center m-0">Ongoing</div>
+                                                            </td>
+                                                            <td>
+                                                               <a href="">Edit</a>|
+                                                               <a href="">Delete</a>
+                                                            </td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td><a href="lottery/edit-lottery.html">Spin The Wheel 745</a></td>
+                                                            <td>Lucky_Draw_745</td>
+                                                            <td>Lucky Draw (Wheel)</td>
+                                                            <td>2023-11-07 10:00:00</td>
+                                                            <td>2023-11-07 10:00:00</td>
+                                                            <td>2023-11-07 10:00:00</td>
+                                                            <td>
+                                                              <div class="alert alert-success p-0 text-center m-0">Ongoing</div>
+                                                            </td>
+                                                            <td>
+                                                               <a href="">Edit</a>|
+                                                               <a href="">Delete</a>
+                                                            </td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td><a href="lottery/edit-lottery.html">Spin The Wheel 745</a></td>
+                                                            <td>Lucky_Draw_745</td>
+                                                            <td>Lucky Draw (Wheel)</td>
+                                                            <td>2023-11-07 10:00:00</td>
+                                                            <td>2023-11-07 10:00:00</td>
+                                                            <td>2023-11-07 10:00:00</td>
+                                                            <td>
+                                                              <div class="alert alert-success p-0 text-center m-0">Ongoing</div>
+                                                            </td>
+                                                            <td>
+                                                               <a href="">Edit</a>|
+                                                               <a href="">Delete</a>
+                                                            </td>
+                                                         </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -830,23 +920,28 @@
     <script src="js/demo_customizer.js?version=4.5.0"></script>
     <script src="js/main.js?version=4.5.0"></script>
     <script>
-        ; (function (i, s, o, g, r, a, m) {
-            i["GoogleAnalyticsObject"] = r
-                ; (i[r] =
-                    i[r] ||
-                    function () {
-                        ; (i[r].q = i[r].q || []).push(arguments)
-                    }),
-                    (i[r].l = 1 * new Date())
-                ; (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0])
-            a.async = 1
-            a.src = g
-            m.parentNode.insertBefore(a, m)
-        })(window, document, "script", "https://www.google-analytics.com/analytics.js", "ga")
+        $('input.datepicker').daterangepicker({
+            "singleDatePicker": true,
+            timePicker: true,
+            timePickerIncrement: 30,
+            locale: {
+                format: 'YYYY-MM-DD hh:mm:ss'
+            }
+        });
+        $('input.daterange').daterangepicker({
+            "startDate": "2023-11-09",
+            "endDate": "2023-11-19",
+            timePicker: true,
+            timePickerIncrement: 30,
+            locale: {
+                format: 'YYYY-MM-DD hh:mm:ss'
+            }
+        })
 
-        ga("create", "UA-XXXXXXXX-9", "auto")
-        ga("send", "pageview")
-
+        $(".select2").select2({
+            dropdownAutoWidth: true,
+            width: '100%',
+        })
     </script>
 </body>
 
