@@ -579,9 +579,7 @@ $(function () {
   });
   os_init_sub_menus(); // #12. CONTENT SIDE PANEL TOGGLER
 
-  $('.content-panel-toggler, .content-panel-close, .content-panel-open').on('click', function () {
-    $('.all-wrapper').toggleClass('content-panel-active');
-  }); // #13. EMAIL APP 
+   // #13. EMAIL APP 
 
   $('.more-messages').on('click', function () {
     $(this).hide();
