@@ -22,6 +22,95 @@
    <link rel="stylesheet" href="/css/select2.css">
    <link rel="stylesheet" href="/css/sidebar.css">
    <link rel="stylesheet" href="/css/tabs.css">
+
+   <style>
+      .bg-theme {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         padding: 5px;
+         width: 100%;
+         height: 92px;
+         background: #f8fcff;
+         border-radius: 2px 2px 0 0;
+         border: 1px solid #e0e0e0;
+         overflow: hidden;
+      }
+
+      .page-content-phone {
+         position: relative;
+         width: 377px;
+         height: 812px;
+         border: 1px solid #e4e9ec;
+         border-radius: 12px;
+         box-shadow: 0 0 10px 1px #ced2d3;
+      }
+
+      .phone {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         height: 44px;
+         padding: 0 16px;
+         background: #fff;
+         font-size: 15px;
+         font-family: NunitoSans-Bold;
+         color: #000;
+         border-top-left-radius: 12px;
+         border-top-right-radius: 12px;
+      }
+
+      .phone-head-title {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         left: 0;
+         top: 0;
+         right: 0;
+         width: 100%;
+         margin: 0 auto;
+         padding: 0 16px;
+         height: 44px;
+         background-color: #fff;
+         z-index: 999;
+      }
+
+      .phone-head-title h3 {
+         overflow: hidden;
+         white-space: nowrap;
+         text-overflow: ellipsis;
+         font-size: 18px;
+         color: #000;
+         line-height: 21px;
+         margin: 0;
+      }
+
+      .spinning-container {
+         width: 100%;
+         display: flex;
+         justify-content: center;
+         margin: 3rem 0;
+      }
+
+      .spinning-container img {
+         width: 300px;
+         height: 300px;
+      }
+
+      .chance-container {
+         text-align: center;
+      }
+
+      .winning-container {
+         height: 78px;
+         margin: 10px 16px 0 16px;
+         padding: 12px 0 12px 12px;
+         background: rgba(0, 0, 0, .16);
+         border-radius: 12px;
+         font-size: 12px;
+         color: #fff;
+      }
+   </style>
 </head>
 
 <body class="full-screen with-content-panel menu-position-side menu-side-left">
@@ -107,7 +196,7 @@
             </div>
          </div>
       </div>
-      <div class="layout-w" style="height: 100vh;">
+      <div class="layout-w" style="min-height: 100vh;">
          <div class="menu-mobile menu-activated-on-click color-scheme-light">
             <div class="mm-logo-buttons-w">
                <div class="mm-buttons">
@@ -644,76 +733,210 @@
             </ul>
          </div>
          <div class="content-w">
-            <div class="content-panel-toggler">
-               <i class="os-icon os-icon-grid-squares-22"></i><span>Sidebar</span>
-            </div>
             <div class="content-i">
-               <div class="content-box w-100">
-                  <div class="element-wrapper">
-                     <div class="row">
-                        <div class="col-sm-2">
-                           <div class="element-wrapper">
-                              <div class="element-box" style="padding: 0;">
-                                 <h6 class="element-header m-3 pt-3">All Page</h6>
+               <div class="content-box">
+                  <div class="row">
+                     <div class="col-sm-2">
+                        <div class="element-wrapper">
+                           <div class="element-box" style="padding: 0;">
+                              <h6 class="element-header m-3 pt-3">All Page</h6>
 
-                                 <div class="row">
-                                    <div class="col-12">
-                                       <div class="ae-side-menu" style="background-color: #fff;">
-                                          <ul class="ae-main-menu">
-                                             <li class="active">
-                                                <a href="#">
-                                                   <i class="os-icon os-icon-file"></i>
-                                                   <span>All</span>
-                                                </a>
-                                             </li>
-                                             <li class="">
-                                                <a href="#">
-                                                   <i class="os-icon os-icon-file"></i>
-                                                   <span>Rules</span>
-                                                </a>
-                                             </li>
-                                             <li class="">
-                                                <a href="#">
-                                                   <i class="os-icon os-icon-file"></i>
-                                                   <span>Prize Details</span>
-                                                </a>
-                                             </li>
-                                             <li class="">
-                                                <a href="#">
-                                                   <i class="os-icon os-icon-file"></i>
-                                                   <span>Win the Prize</span>
-                                                </a>
-                                             </li>
-                                             <li class="">
-                                                <a href="#">
-                                                   <i class="os-icon os-icon-file"></i>
-                                                   <span>Failed to Win the Prize</span>
-                                                </a>
-                                             </li>
-                                          </ul>
-                                       </div>
+                              <div class="row">
+                                 <div class="col-12">
+                                    <div class="ae-side-menu" style="background-color: #fff;">
+                                       <ul class="ae-main-menu">
+                                          <li class="active">
+                                             <a href="#">
+                                                <i class="os-icon os-icon-file"></i>
+                                                <span>All</span>
+                                             </a>
+                                          </li>
+                                          <li class="">
+                                             <a href="#">
+                                                <i class="os-icon os-icon-file"></i>
+                                                <span>Rules</span>
+                                             </a>
+                                          </li>
+                                          <li class="">
+                                             <a href="#">
+                                                <i class="os-icon os-icon-file"></i>
+                                                <span>Prize Details</span>
+                                             </a>
+                                          </li>
+                                          <li class="">
+                                             <a href="#">
+                                                <i class="os-icon os-icon-file"></i>
+                                                <span>Win the Prize</span>
+                                             </a>
+                                          </li>
+                                          <li class="">
+                                             <a href="#">
+                                                <i class="os-icon os-icon-file"></i>
+                                                <span>Failed to Win the Prize</span>
+                                             </a>
+                                          </li>
+                                       </ul>
                                     </div>
                                  </div>
                               </div>
                            </div>
                         </div>
+                     </div>
 
-                        <div class="col-sm-5">
+                     <div class="col-sm-5 d-flex justify-content-center">
+                        <div class="page-content-phone" id="preview">
+                           <div class="phone">
+                              <span>11:50 PM</span>
+                              <i class="os-icon os-icon-wifi"></i>
+                           </div>
+                           <header class="phone-head-title">
+                              <i class="os-icon os-icon-arrow-left2"></i>
+                              <h3>Spin the Wheel &amp; Win the Prizes</h3>
+                              <i class="os-icon os-icon-x"></i>
+                           </header>
+                           <div class="content-wrap">
+                              <div style="background-position: center top 167px;">
+                                 <div class="p-2 text-white text-center" style="background: rgba(67, 28, 153, 0.5);">
+                                    <span>Spin and Win!</span>
+                                 </div>
+                                 <div class="d-flex justify-content-between p-3">
+                                    <div class="btn" style="background: rgb(252, 209, 22); color: rgb(62, 62, 62);">
+                                       Mechanics</div>
+                                    <div class="btn" style="background: rgb(252, 209, 22); color: rgb(62, 62, 62);">
+                                       Sound</div>
+                                 </div>
+                                 <div class="spinning-container">
+                                    <img src="/img/spinning.gif" alt="" class="img-fluid">
+                                 </div>
 
+                                 <div class="chance-container">
+                                    <span>You still have <span class="text-danger">5</span> to attempt</span>
+                                 </div>
+
+                                 <div class="winning-container">
+                                    <span class="d-block">Configuration to i**y@gmail.com for winning 10 point</span>
+                                    <span class="d-block">Configuration to i**y@gmail.com for winning 10 point</span>
+                                    <span class="d-block">Configuration to i**y@gmail.com for winning 10 point</span>
+                                 </div>
+
+                                 <div class="d-flex justify-content-center mt-3">
+                                    <div class="btn pl-5 pt-3 pr-5 pb-3"
+                                       style="background: rgb(252, 209, 22); color: rgb(62, 62, 62);font-size: 16px;border-radius: 50px;font-weight: 700;">
+                                       My Prizes</div>
+                                 </div>
+                              </div>
+                           </div>
                         </div>
+                     </div>
 
-                        <div class="col-sm-5">
-                           <div class="element-wrapper">
-                              <div class="element-box">
-                                 <div class="tab-container">
-                                    <div class="tabs">
-                                       <button class="tab-button active" onclick="openTab('tab1')">Basic
-                                          Setting</button>
-                                       <button class="tab-button" onclick="openTab('tab2')">Price Setting</button>
+                     <div class="col-sm-5">
+                        <div class="element-wrapper">
+                           <div class="element-box">
+                              <div class="tab-container">
+                                 <div class="tabs">
+                                    <button class="tab-button active" onclick="openTab('tab1')">Basic
+                                       Setting</button>
+                                    <button class="tab-button" onclick="openTab('tab2')">Price Setting</button>
+                                 </div>
+
+                                 <div id="tab1" class="tab-content">
+                                    <h6 class="element-header">Basic Settings</h6>
+                                    <div class="row mt-2">
+                                       <div class="col-12">
+                                          <div class="form-group row">
+                                             <label class="col-form-label col-3 text-right" for="">Activity
+                                                Category</label>
+                                             <div class="col-9">
+                                                <input class="form-control" placeholder="Please Input" type="text">
+                                             </div>
+                                          </div>
+                                          <div class="form-group row">
+                                             <label class="col-form-label col-3 text-right" for="">Activity
+                                                Name</label>
+                                             <div class="col-9">
+                                                <input class="form-control" placeholder="Please Input" type="text">
+                                             </div>
+                                          </div>
+                                          <div class="form-group row">
+                                             <label class="col-form-label col-3 text-right" for="">Header</label>
+                                             <div class="col-9">
+                                                <input class="form-control" placeholder="Please Input" type="text">
+                                             </div>
+                                          </div>
+                                          <div class="form-group row">
+                                             <label class="col-form-label col-3 text-right" for="">Title</label>
+                                             <div class="col-9">
+                                                <input class="form-control" placeholder="Please Input" type="text">
+                                             </div>
+                                          </div>
+                                          <div class="form-group row">
+                                             <label class="col-form-label col-3 text-right" for="">Activity Start
+                                                Time</label>
+                                             <div class="col-9">
+                                                <input class="form-control daterange" placeholder="Please Input"
+                                                   type="text">
+                                             </div>
+                                          </div>
+                                          <div class="form-group row">
+                                             <label class="col-form-label col-3 text-right" for="">Rules</label>
+                                             <div class="col-9">
+                                                <textarea class="form-control" placeholder="Please Input" type="text"
+                                                   rows="5"></textarea>
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                       <h6 class="element-header">Theme Settings</h6>
+
+                                       <div class="row w-100">
+                                          <div class="col-sm-4 mb-2" style="position: relative;">
+                                             <span>Background Skin</span><br>
+                                             <small>size recommended 375x724</small>
+                                             <div class="bg-theme"></div>
+                                          </div>
+                                          <div class="col-sm-4 mb-2" style="position: relative;">
+                                             <span>Banner Skin</span><br>
+                                             <small>size recommended 375x724</small>
+                                             <div class="bg-theme"></div>
+                                          </div>
+                                          <div class="col-sm-4 mb-2" style="position: relative;">
+                                             <span>Luck Wheel Skin</span><br>
+                                             <small>size recommended 375x724</small>
+                                             <div class="bg-theme"></div>
+                                          </div>
+                                          <div class="col-sm-4 mb-2" style="position: relative;">
+                                             <span>Spin Skin</span><br>
+                                             <small>size recommended 375x724</small>
+                                             <div class="bg-theme"></div>
+                                          </div>
+                                       </div>
+
+                                       <h6 class="element-header">Music Settings</h6>
+
+                                       <div class="row w-100">
+                                          <div class="col-sm-4 mb-2" style="position: relative;">
+                                             <span>Background Music Templates</span><br>
+                                             <small>size recommended 375x724</small>
+                                             <div class="bg-theme"></div>
+                                          </div>
+                                          <div class="col-sm-4 mb-2" style="position: relative;">
+                                             <span>Prize Music Templates</span><br>
+                                             <small>size recommended 375x724</small>
+                                             <div class="bg-theme"></div>
+                                          </div>
+                                       </div>
+
                                     </div>
+                                 </div>
+                                 <div id="tab2" class="tab-content">
+                                    <h6>Parts of Prizes</h6>
 
-                                    <div id="tab1" class="tab-content"></div>
-                                    <div id="tab2" class="tab-content"></div>
+                                    <div class="d-block">
+                                       <span>Remaining Winning Rate</span>
+                                       <span class="text-info">0%</span><br>
+                                       <span>Tip: Save only when the total remaining winning rate is reduced to
+                                          0%!</span>
+                                    </div>
                                  </div>
                               </div>
                            </div>
