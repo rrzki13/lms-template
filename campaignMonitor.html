@@ -156,7 +156,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="layout-w" style="height: 100vh;">
+		<div class="layout-w" style="min-height: 100vh;">
 			<div class="menu-mobile menu-activated-on-click color-scheme-light">
 				<div class="mm-logo-buttons-w">
 					<div class="mm-buttons">
@@ -701,9 +701,7 @@
 					<i class="os-icon os-icon-grid-squares-22"></i><span>Sidebar</span>
 				</div>
 				<div class="content-i">
-					<div class="content-box w-100">
-
-
+					<div class="content-box">
 						<div class="element-wrapper">
 							<div class="element-actions">
 								<div class="d-flex">
@@ -716,100 +714,165 @@
 							<h6 class="element-header">Campaign Monitor List</h6>
 							<div class="element-content">
 								<div class="element-box">
-									<div class="d-flex justify-content-between">
-										<div>
-											<div class="tab-container">
-												<div class="tabs">
-													<button class="tab-button active"
-														onclick="openTab('tab1')">Warning</button>
-													<button class="tab-button" onclick="openTab('tab2')">Fixed</button>
-													<button class="tab-button" onclick="openTab('tab3')">All</button>
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="d-flex justify-content-between">
+												<div>
+													<div class="tab-container">
+														<div class="tabs">
+															<button class="tab-button active"
+																onclick="openTab('tab1')">Warning</button>
+															<button class="tab-button" onclick="openTab('tab2')">Fixed</button>
+															<button class="tab-button" onclick="openTab('tab3')">All</button>
+														</div>
+														<div id="tab1" class="tab-content">
+														</div>
+														<div id="tab2" class="tab-content">
+		
+														</div>
+														<div id="tab3" class="tab-content">
+		
+														</div>
+													</div>
 												</div>
-												<div id="tab1" class="tab-content">
-												</div>
-												<div id="tab2" class="tab-content">
-
-												</div>
-												<div id="tab3" class="tab-content">
-
+												<div>
+													<button class="btn btn-sm btn-primary">Export</button>
 												</div>
 											</div>
 										</div>
-										<div>
-											<button class="btn btn-sm btn-primary">Export</button>
+										<div class="col-sm-12 col-xxxl-12">
+											<div class="container">
+												<div class="table-responsive" style="overflow-x: auto;">
+													<table class="table table-striped">
+														<thead>
+															<tr>
+																<th class="fixed-column">Campaign Name</th>
+																<th>Batch ID</th>
+																<th>Process Type</th>
+																<th>Campaign Code</th>
+																<th>Run Type</th>
+																<th>Created by</th>
+																<th>Start Time</th>
+																<th>End Time</th>
+																<th>Batch Status</th>
+																<!-- <th>Campaign Status</th>
+																<th class="fixed-column">Run Number</th> -->
+																<!-- <th class="fixed-column">Succeed</th>
+																<th class="fixed-column">Failed</th>
+																<th class="fixed-column">Pending</th>
+																<th class="fixed-column">Rule Control</th>
+																<th class="fixed-column">Control</th> -->
+																<th class="fixed-column">Operation</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td class="fixed-column"><a>1-Churning Customer NBA
+																		Campaign_t1</a></td>
+																<td>115490</td>
+																<td>LOTTERY</td>
+																<td>DMC20230825114101</td>
+																<td>Manually</td>
+																<td>DMCManager</td>
+																<td>25/08/2023 13:32:48</td>
+																<td>25/08/2023 13:32:48</td>
+																<td>Finished</td>
+																<!-- <td>Published</td>
+																<td class="fixed-column"><a>4</a></td> -->
+																<!-- <td class="fixed-column"><a>0</a></td>
+																<td class="fixed-column"><a class="text-danger">4</a></td>
+																<td class="fixed-column"><a>0</a></td>
+																<td class="fixed-column">-</td>
+																<td class="fixed-column"><a>0</a></td> -->
+																<td class="fixed-column"><a>Statistics</a><a>Fixed</a></td>
+															</tr>
+															<tr>
+																<td class="fixed-column"><a>1-Churning Customer NBA
+																		Campaign_t1</a></td>
+																<td>115490</td>
+																<td>LOTTERY</td>
+																<td>DMC20230825114101</td>
+																<td>Manually</td>
+																<td>DMCManager</td>
+																<td>25/08/2023 13:32:48</td>
+																<td>25/08/2023 13:32:48</td>
+																<td>Finished</td>
+																<!-- <td>Published</td>
+																<td class="fixed-column"><a>4</a></td> -->
+																<!-- <td class="fixed-column"><a>0</a></td>
+																<td class="fixed-column"><a class="text-danger">4</a></td>
+																<td class="fixed-column"><a>0</a></td>
+																<td class="fixed-column">-</td>
+																<td class="fixed-column"><a>0</a></td> -->
+																<td class="fixed-column"><a>Statistics</a><a>Fixed</a></td>
+															</tr>
+															<tr>
+																<td class="fixed-column"><a>1-Churning Customer NBA
+																		Campaign_t1</a></td>
+																<td>115490</td>
+																<td>LOTTERY</td>
+																<td>DMC20230825114101</td>
+																<td>Manually</td>
+																<td>DMCManager</td>
+																<td>25/08/2023 13:32:48</td>
+																<td>25/08/2023 13:32:48</td>
+																<td>Finished</td>
+																<!-- <td>Published</td>
+																<td class="fixed-column"><a>4</a></td> -->
+																<!-- <td class="fixed-column"><a>0</a></td>
+																<td class="fixed-column"><a class="text-danger">4</a></td>
+																<td class="fixed-column"><a>0</a></td>
+																<td class="fixed-column">-</td>
+																<td class="fixed-column"><a>0</a></td> -->
+																<td class="fixed-column"><a>Statistics</a><a>Fixed</a></td>
+															</tr>
+															<tr>
+																<td class="fixed-column"><a>1-Churning Customer NBA
+																		Campaign_t1</a></td>
+																<td>115490</td>
+																<td>LOTTERY</td>
+																<td>DMC20230825114101</td>
+																<td>Manually</td>
+																<td>DMCManager</td>
+																<td>25/08/2023 13:32:48</td>
+																<td>25/08/2023 13:32:48</td>
+																<td>Finished</td>
+																<!-- <td>Published</td>
+																<td class="fixed-column"><a>4</a></td> -->
+																<!-- <td class="fixed-column"><a>0</a></td>
+																<td class="fixed-column"><a class="text-danger">4</a></td>
+																<td class="fixed-column"><a>0</a></td>
+																<td class="fixed-column">-</td>
+																<td class="fixed-column"><a>0</a></td> -->
+																<td class="fixed-column"><a>Statistics</a><a>Fixed</a></td>
+															</tr>
+															<tr>
+																<td class="fixed-column"><a>1-Churning Customer NBA
+																		Campaign_t1</a></td>
+																<td>115490</td>
+																<td>LOTTERY</td>
+																<td>DMC20230825114101</td>
+																<td>Manually</td>
+																<td>DMCManager</td>
+																<td>25/08/2023 13:32:48</td>
+																<td>25/08/2023 13:32:48</td>
+																<td>Finished</td>
+																<!-- <td>Published</td>
+																<td class="fixed-column"><a>4</a></td> -->
+																<!-- <td class="fixed-column"><a>0</a></td>
+																<td class="fixed-column"><a class="text-danger">4</a></td>
+																<td class="fixed-column"><a>0</a></td>
+																<td class="fixed-column">-</td>
+																<td class="fixed-column"><a>0</a></td> -->
+																<td class="fixed-column"><a>Statistics</a><a>Fixed</a></td>
+															</tr>
+															
+															
+														</tbody>
+													</table>
+												</div>
+											</div>
 										</div>
-									</div>
-
-									<!--------------------
-                                            START - Controls Above Table
-                                            -------------------->
-									<!--------------------
-                                            END - Controls Above Table
-                                            -------------------->
-									<div class="table-responsive">
-										<!--------------------
-                                              START - Basic Table
-                                              -------------------->
-										<table class="table table-lightborder">
-											<thead>
-												<tr>
-													<th>
-														Campaign Name
-													</th>
-													<th>
-														Batch ID
-													</th>
-													<th>
-														Process Type
-													</th>
-													<th>
-														Campaign Code
-													</th>
-													<th>
-														Run Type
-													</th>
-													<th>
-														Created by
-													</th>
-													<th>
-														Start Time
-													</th>
-													<th>
-														End Time
-													</th>
-													<th>
-														Batch Status
-													</th>
-													<th>
-														Campaign Status
-													</th>
-													<th>
-														Run Number
-													</th>
-													<th>
-														Succeed
-													</th>
-													<th>
-														Failed
-													</th>
-													<th>
-														Pending
-													</th>
-													<th>
-														Rule Control
-													</th>
-													<th>
-														Control
-													</th>
-													<th>
-														Operation
-													</th>
-												</tr>
-											</thead>
-										</table>
-										<!--------------------
-                                              END - Basic Table
-                                              -------------------->
 									</div>
 								</div>
 							</div>

@@ -18,6 +18,14 @@
 	<link href="vendors/css/perfect-scrollbar.min.css" rel="stylesheet" />
 	<link href="vendors/css/slick.css" rel="stylesheet" />
 	<link href="css/main.css?version=4.5.0" rel="stylesheet" />
+	<style>
+		.fixed-column {
+			position: sticky;
+			z-index: 1;
+		}
+
+		
+	</style>
 </head>
 
 <body class="full-screen with-content-panel menu-position-side menu-side-left">
@@ -743,8 +751,8 @@
 															<!-- <canvas height="261" id="barChart1" width="543"
 																style="display: block; height: 174px; width: 362px;"
 																class="chartjs-render-monitor"></canvas> -->
-															<div id="barChart1"
-																style="height: auto; width: 100%;"></div>
+															<div id="barChart1" style="height: auto; width: 100%;">
+															</div>
 														</div>
 													</div>
 												</div>
@@ -859,7 +867,7 @@
 										</div>
 										<div class="row mb-5">
 											<div class="col-6">
-												<div class="row">		
+												<div class="row">
 													<div class="col-sm-4">
 														<div class="el-tablo-cell right">
 															<div class="label" style="font-size: 0.5rem!important;">
@@ -904,122 +912,214 @@
 							<div class="col-sm-12">
 								<div class="element-wrapper">
 									<h6 class="element-header">Operation and Maintenance</h6>
-									<div class="element-box-tp">
-										<!--------------------
-                      START - Controls Above Table
-                      -------------------->
-										<div class="controls-above-table">
-											<div class="row">
-												<div class="col-sm-3 col-xxxl-3">
-													<div class="element-box el-tablo bg-danger">
-														<div class="label" style="font-weight: bold; color:black">
-															<div class="d-flex align-items-center">
-																<span><i class="os-icon os-icon-alert-triangle mr-3"
-																		style="font-size: 2rem!important;"></i></span><span
-																	style="font-size: 0.95rem!important;">Warning</span>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="col-sm-3 col-xxxl-3 ">
-													<div class="element-box el-tablo bg-info">
-														<div class="label" style="font-weight: bold; color:black">
-															<div class="d-flex align-items-center">
-																<span><i class="os-icon os-icon-ui-92 mr-3"
-																		style="font-size: 2rem!important;"></i></span><span
-																	style="font-size: 0.95rem!important;">Delayed
-																	Process</span>
-															</div>
-
-														</div>
-													</div>
-												</div>
-												<div class="col-sm-3 col-xxxl-3 ">
-													<div class="element-box el-tablo bg-success">
-														<div class="label" style="font-weight: bold; color:black">
-															<div class="d-flex align-items-center">
-																<span><i class="os-icon os-icon-monitor mr-3"
-																		style="font-size: 2rem!important;"></i></span><span
-																	style="font-size: 0.95rem!important;">Daily
-																	Monitor</span>
-															</div>
-
-														</div>
-													</div>
-												</div>
-												<div class="col-sm-3 col-xxxl-3 ">
-													<div class="element-box el-tablo bg-info">
-														<div class="label" style="font-weight: bold; color:black">
-															<div class="d-flex align-items-center">
-																<span><i class="os-icon os-icon-basic-2-259-calendar mr-3"
-																		style="font-size: 2rem!important;"></i></span><span
-																	style="font-size: 0.95rem!important;">Campaign
-																	Calender</span>
-															</div>
-
+									<div class="element-box">
+										<div class="row">
+											<div class="col-sm-3 col-xxxl-3">
+												<div class="element-box el-tablo bg-danger">
+													<div class="label" style="font-weight: bold; color:black">
+														<div class="d-flex align-items-center">
+															<span><i class="os-icon os-icon-alert-triangle mr-3"
+																	style="font-size: 2rem!important;"></i></span><span
+																style="font-size: 0.95rem!important;">Warning</span>
 														</div>
 													</div>
 												</div>
 											</div>
-										</div>
-										<!--------------------
-                      END - Controls Above Table
-                      ------------------          --><!--------------------
-                      START - Table with actions
-                      ------------------  -->
-										<div class="table-responsive">
-											<table class="table table-bordered table-lg table-v2 table-striped">
-												<thead>
-													<tr>
-														<th>Campaign Name</th>
-														<th>Batch ID</th>
-														<th>Proccess Type</th>
-														<th>Campaign Code</th>
-														<th>Run Number</th>
-														<th>Succeed</th>
-														<th>Faild</th>
-														<th>Pending</th>
-														<th>Rule Control</th>
-														<th>Control</th>
-														<th>Operation</th>
-													</tr>
-												</thead>
-											</table>
-										</div>
-										<!--------------------
-                      END - Table with actions
-                      ------------------            --><!--------------------
-                      START - Controls below table
-                      ------------------  -->
-										<div class="controls-below-table">
-											<div class="table-records-info">Showing records 1 - 5</div>
-											<div class="table-records-pages">
-												<ul>
-													<li>
-														<a href="#">Previous</a>
-													</li>
-													<li>
-														<a class="current" href="#">1</a>
-													</li>
-													<li>
-														<a href="#">2</a>
-													</li>
-													<li>
-														<a href="#">3</a>
-													</li>
-													<li>
-														<a href="#">4</a>
-													</li>
-													<li>
-														<a href="#">Next</a>
-													</li>
-												</ul>
+											<div class="col-sm-3 col-xxxl-3 ">
+												<div class="element-box el-tablo bg-info">
+													<div class="label" style="font-weight: bold; color:black">
+														<div class="d-flex align-items-center">
+															<span><i class="os-icon os-icon-ui-92 mr-3"
+																	style="font-size: 2rem!important;"></i></span><span
+																style="font-size: 0.95rem!important;">Delayed
+																Process</span>
+														</div>
+
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-3 col-xxxl-3 ">
+												<div class="element-box el-tablo bg-success">
+													<div class="label" style="font-weight: bold; color:black">
+														<div class="d-flex align-items-center">
+															<span><i class="os-icon os-icon-monitor mr-3"
+																	style="font-size: 2rem!important;"></i></span><span
+																style="font-size: 0.95rem!important;">Daily
+																Monitor</span>
+														</div>
+
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-3 col-xxxl-3 ">
+												<div class="element-box el-tablo bg-info">
+													<div class="label" style="font-weight: bold; color:black">
+														<div class="d-flex align-items-center">
+															<span><i class="os-icon os-icon-basic-2-259-calendar mr-3"
+																	style="font-size: 2rem!important;"></i></span><span
+																style="font-size: 0.95rem!important;">Campaign
+																Calender</span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-12 col-xxxl-12">
+												<div class="container">
+
+													<div class="table-responsive" style="overflow-x: auto;">
+														<table class="table table-striped">
+															<thead>
+																<tr>
+																	<th class="fixed-column">Campaign Name</th>
+																	<th>Batch ID</th>
+																	<th>Process Type</th>
+																	<th>Campaign Code</th>
+																	<th>Run Type</th>
+																	<th>Created by</th>
+																	<th>Start Time</th>
+																	<th>End Time</th>
+																	<th>Batch Status</th>
+																	<th>Campaign Status</th>
+																	<th class="fixed-column">Run Number</th>
+																	<th class="fixed-column">Succeed</th>
+																	<th class="fixed-column">Failed</th>
+																	<th class="fixed-column">Pending</th>
+																	<th class="fixed-column">Rule Control</th>
+																	<th class="fixed-column">Control</th>
+																	<th class="fixed-column">Operation</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td class="fixed-column"><a>1-Churning Customer NBA
+																			Campaign_t1</a></td>
+																	<td>115490</td>
+																	<td>LOTTERY</td>
+																	<td>DMC20230825114101</td>
+																	<td>Manually</td>
+																	<td>DMCManager</td>
+																	<td>25/08/2023 13:32:48</td>
+																	<td>25/08/2023 13:32:48</td>
+																	<td>Finished</td>
+																	<td>Published</td>
+																	<td class="fixed-column"><a>4</a></td>
+																	<td class="fixed-column"><a>0</a></td>
+																	<td class="fixed-column"><a class="text-danger">4</a></td>
+																	<td class="fixed-column"><a>0</a></td>
+																	<td class="fixed-column">-</td>
+																	<td class="fixed-column"><a>0</a></td>
+																	<td class="fixed-column"><a>Statistics</a><a>Fixed</a></td>
+																</tr>
+																<tr>
+																	<td class="fixed-column"><a>1-Churning Customer NBA
+																			Campaign_t1</a></td>
+																	<td>115490</td>
+																	<td>LOTTERY</td>
+																	<td>DMC20230825114101</td>
+																	<td>Manually</td>
+																	<td>DMCManager</td>
+																	<td>25/08/2023 13:32:48</td>
+																	<td>25/08/2023 13:32:48</td>
+																	<td>Finished</td>
+																	<td>Published</td>
+																	<td class="fixed-column"><a>4</a></td>
+																	<td class="fixed-column"><a>0</a></td>
+																	<td class="fixed-column"><a class="text-danger">4</a></td>
+																	<td class="fixed-column"><a>0</a></td>
+																	<td class="fixed-column">-</td>
+																	<td class="fixed-column"><a>0</a></td>
+																	<td class="fixed-column"><a>Statistics</a><a>Fixed</a></td>
+																</tr>
+																<tr>
+																	<td class="fixed-column"><a>1-Churning Customer NBA
+																			Campaign_t1</a></td>
+																	<td>115490</td>
+																	<td>LOTTERY</td>
+																	<td>DMC20230825114101</td>
+																	<td>Manually</td>
+																	<td>DMCManager</td>
+																	<td>25/08/2023 13:32:48</td>
+																	<td>25/08/2023 13:32:48</td>
+																	<td>Finished</td>
+																	<td>Published</td>
+																	<td class="fixed-column"><a>4</a></td>
+																	<td class="fixed-column"><a>0</a></td>
+																	<td class="fixed-column"><a class="text-danger">4</a></td>
+																	<td class="fixed-column"><a>0</a></td>
+																	<td class="fixed-column">-</td>
+																	<td class="fixed-column"><a>0</a></td>
+																	<td class="fixed-column"><a>Statistics</a><a>Fixed</a></td>
+																</tr>
+																<tr>
+																	<td class="fixed-column"><a>1-Churning Customer NBA
+																			Campaign_t1</a></td>
+																	<td>115490</td>
+																	<td>LOTTERY</td>
+																	<td>DMC20230825114101</td>
+																	<td>Manually</td>
+																	<td>DMCManager</td>
+																	<td>25/08/2023 13:32:48</td>
+																	<td>25/08/2023 13:32:48</td>
+																	<td>Finished</td>
+																	<td>Published</td>
+																	<td class="fixed-column"><a>4</a></td>
+																	<td class="fixed-column"><a>0</a></td>
+																	<td class="fixed-column"><a class="text-danger">4</a></td>
+																	<td class="fixed-column"><a>0</a></td>
+																	<td class="fixed-column">-</td>
+																	<td class="fixed-column"><a>0</a></td>
+																	<td class="fixed-column"><a>Statistics</a><a>Fixed</a></td>
+																</tr>
+																<tr>
+																	<td class="fixed-column"><a>1-Churning Customer NBA
+																			Campaign_t1</a></td>
+																	<td>115490</td>
+																	<td>LOTTERY</td>
+																	<td>DMC20230825114101</td>
+																	<td>Manually</td>
+																	<td>DMCManager</td>
+																	<td>25/08/2023 13:32:48</td>
+																	<td>25/08/2023 13:32:48</td>
+																	<td>Finished</td>
+																	<td>Published</td>
+																	<td class="fixed-column"><a>4</a></td>
+																	<td class="fixed-column"><a>0</a></td>
+																	<td class="fixed-column"><a class="text-danger">4</a></td>
+																	<td class="fixed-column"><a>0</a></td>
+																	<td class="fixed-column">-</td>
+																	<td class="fixed-column"><a>0</a></td>
+																	<td class="fixed-column"><a>Statistics</a><a>Fixed</a></td>
+																</tr>
+																<tr>
+																	<td class="fixed-column"><a>1-Churning Customer NBA
+																			Campaign_t1</a></td>
+																	<td>115490</td>
+																	<td>LOTTERY</td>
+																	<td>DMC20230825114101</td>
+																	<td>Manually</td>
+																	<td>DMCManager</td>
+																	<td>25/08/2023 13:32:48</td>
+																	<td>25/08/2023 13:32:48</td>
+																	<td>Finished</td>
+																	<td>Published</td>
+																	<td class="fixed-column"><a>4</a></td>
+																	<td class="fixed-column"><a>0</a></td>
+																	<td class="fixed-column"><a class="text-danger">4</a></td>
+																	<td class="fixed-column"><a>0</a></td>
+																	<td class="fixed-column">-</td>
+																	<td class="fixed-column"><a>0</a></td>
+																	<td class="fixed-column"><a>Statistics</a><a>Fixed</a></td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+
 											</div>
 										</div>
-										<!--------------------
-                      END - Controls below table
-                      -------------------->
 									</div>
+
+
 								</div>
 							</div>
 						</div>
@@ -1027,7 +1127,9 @@
 				</div>
 			</div>
 		</div>
-		<div class="display-type"></div>
+	</div>
+	</div>
+	<div class="display-type"></div>
 	</div>
 	<script src="vendors/js/jquery.min.js"></script>
 	<script src="vendors/js/popper.min.js"></script>
@@ -1208,25 +1310,25 @@
 				text: null,
 				align: 'left'
 			},
-		
+
 			yAxis: {
 				title: {
 					text: null
 				}
 			},
-		
+
 			xAxis: {
 				accessibility: {
 					rangeDescription: 'Range: 2010 to 2020'
 				}
 			},
-		
+
 			legend: {
 				layout: 'vertical',
 				align: 'right',
 				verticalAlign: 'middle'
 			},
-		
+
 			plotOptions: {
 				series: {
 					label: {
@@ -1239,13 +1341,13 @@
 			credits: {
 				enabled: false
 			},
-		
+
 			series: [{
 				name: 'Other',
 				data: [21908, 5548, 8105, 11248, 8989, 11816, 18274,
 					17300, 13053, 11906, 10073]
 			}],
-		
+
 			responsive: {
 				rules: [{
 					condition: {
@@ -1260,9 +1362,9 @@
 					}
 				}]
 			}
-		
+
 		});
-		
+
 		Highcharts.chart('funnelChart', {
 			chart: {
 				type: 'funnel'
@@ -1299,7 +1401,7 @@
 					['Finalized', 846]
 				]
 			}],
-		
+
 			responsive: {
 				rules: [{
 					condition: {
@@ -1326,25 +1428,25 @@
 				text: null,
 				align: 'left'
 			},
-		
+
 			yAxis: {
 				title: {
 					text: null
 				}
 			},
-		
+
 			xAxis: {
 				accessibility: {
 					rangeDescription: 'Range: 2010 to 2020'
 				}
 			},
-		
+
 			legend: {
 				layout: 'vertical',
 				align: 'right',
 				verticalAlign: 'middle'
 			},
-		
+
 			plotOptions: {
 				series: {
 					label: {
@@ -1357,13 +1459,13 @@
 			credits: {
 				enabled: false
 			},
-		
+
 			series: [{
 				name: 'Other',
 				data: [21908, 5548, 8105, 11248, 8989, 11816, 18274,
 					17300, 13053, 11906, 10073]
 			}],
-		
+
 			responsive: {
 				rules: [{
 					condition: {
@@ -1378,9 +1480,9 @@
 					}
 				}]
 			}
-		
+
 		});
-		
+
 	</script>
 </body>
 
