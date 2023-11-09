@@ -78,6 +78,26 @@
 		}
 	</style>
 
+	<style>
+		.select2-container--default .select2-selection--single .select2-selection__arrow {
+			height: 100% !important;
+		}
+
+		.select2-container .select2-selection--single {
+			height: auto !important;
+			padding: 0.25rem 0.2rem;
+		}
+
+		.select2-container {
+			width: 100% !important;
+			box-sizing: border-box;
+			display: inline-block;
+			margin: 0;
+			position: relative;
+			vertical-align: middle;
+		}
+	</style>
+
 </head>
 
 <body class="full-screen with-content-panel menu-position-side menu-side-left">
@@ -778,98 +798,105 @@
 																<div class="col-sm-4">
 																	<div class="form-group">
 																		<label for="" class="form-label">Effective Date</label>
-																		<input class="form-control form-control-sm w-100"
-																			type="datetime-local">
+																		<input class="form-control form-control-sm datepicker w-100"
+																			type="text" placeholder="Select State">
 																	</div>
 																</div>
 																<div class="col-sm-4">
 																	<div class="form-group">
 																		<label for="" class="form-label">Expired Date</label>
-																		<input class="form-control form-control-sm w-100"
-																			type="datetime-local">
+																		<input class="form-control form-control-sm w-100 datepicker"
+																			type="text" placeholder="Select State">
 																	</div>
 																</div>
 																<div class="col-sm-4">
 																	<div class="form-group">
 																		<label for="" class="form-label">Campaign Type</label>
-																		<select class="form-control">
+																		<select class="form-control select2">
 																			<option>Select State</option>
-																			<option>Medium</option>
+																			<option>Normal</option>
+																			<option>Acqusition</option>
+																			<option>Activation</option>
+																			<option>Retention</option>
+																			<option>Refer</option>
 																		</select>
 																	</div>
 																</div>
 																<div class="col-sm-4">
 																	<div class="form-group">
 																		<label for="" class="form-label">Priority</label>
-																		<select class="form-control">
+																		<select class="form-control select2">
 																			<option>Select State</option>
 																			<option>High</option>
 																			<option>Medium</option>
+																			<option>Low</option>
 																		</select>
 																	</div>
 																</div>
 																<div class="col-sm-4">
 																	<div class="form-group">
 																		<label for="" class="form-label">Status Date</label>
-																		<input class="form-control form-control-sm w-100"
-																			type="datetime-local">
+																		<input class="form-control form-control-sm w-100 daterange"
+																			type="text" placeholder="Select State">
 																	</div>
 																</div>
 																<div class="col-sm-4">
 																	<div class="form-group">
 																		<label for="" class="form-label">Create By</label>
-																		<select class="form-control">
+																		<select class="form-control select2">
 																			<option>Select State</option>
 																			<option>Iki</option>
-																			<option>Iki</option>
-																			<option>Iki</option>
+																			<option>Ilgo</option>
+																			<option>Uray</option>
 																		</select>
 																	</div>
 																</div>
 																<div class="col-sm-4">
 																	<div class="form-group">
 																		<label for="" class="form-label">Creator Organization</label>
-																		<select class="form-control">
+																		<select class="form-control select2">
 																			<option>Select State</option>
-																			<option>High</option>
-																			<option>Medium</option>
+																			<option>Sales Channel</option>
+																			<option>Intenral Organization</option>
 																		</select>
 																	</div>
 																</div>
 																<div class="col-sm-4">
 																	<div class="form-group">
 																		<label for="" class="form-label">Business Type</label>
-																		<select class="form-control">
+																		<select class="form-control select2">
 																			<option>Select State</option>
-																			<option>B2B</option>
-																			<option>B2C</option>
+																			<option>MKT Campaign</option>
+																			<option>SER Campaign</option>
+																			<option>Acqui Usr Campaign</option>
+																			<option>SUR Usr Campaign</option>
 																		</select>
 																	</div>
 																</div>
 																<div class="col-sm-4">
 																	<div class="form-group">
 																		<label for="" class="form-label">Expiry Notification Date</label>
-																		<input class="form-control form-control-sm w-100"
-																			type="datetime-local">
+																		<input class="form-control form-control-sm w-100 datepicker"
+																			type="text" placeholder="Select State">
 																	</div>
 																</div>
 																<div class="col-sm-4">
 																	<div class="form-group">
 																		<label for="" class="form-label">Distribution Channel</label>
-																		<select class="form-control">
+																		<select class="form-control select2">
 																			<option>Select State</option>
-																			<option>B2B</option>
-																			<option>B2C</option>
+																			<option>ALL</option>
+																			<option>Flow</option>
+																			<option>Channel</option>
 																		</select>
 																	</div>
 																</div>
 																<div class="col-sm-4">
 																	<div class="form-group">
 																		<label for="" class="form-label">Project</label>
-																		<select class="form-control">
+																		<select class="form-control select2">
 																			<option>Select State</option>
-																			<option>B2B</option>
-																			<option>B2C</option>
+																			<option>STS Project</option>
 																		</select>
 																	</div>
 																</div>
@@ -889,7 +916,7 @@
 													<div class="element-wrapper mt-3">
 														<div class="element-box">
 															<div class="d-flex align-items-center" style="gap: .5rem;">
-																<button class="btn btn-primary">
+																<button class="btn btn-primary" onclick="openSidebar()">
 																	<i class="os-icon os-icon-plus"></i>
 																	<span class="ml-2">New Campaign</span>
 																</button>
@@ -904,7 +931,7 @@
 																		<a class="dropdown-item" href="#">Batch Resume</a>
 																	</div>
 																</div>
-																<button class="btn btn-white" onclick="openSidebar()">
+																<button class="btn btn-white">
 																	<span>Operation History Campaign</span>
 																</button>
 															</div>
@@ -1043,232 +1070,66 @@
 					</div>
 
 					<div class="content-panel">
-						<div class="content-panel-close" onclick="closeSidebar()">
-							<i class="os-icon os-icon-close"></i>
+						<div class="content-panel-close">
+							<i class="os-icon os-icon-minimize" id="minimize-1" onclick="minimizeSidebar('30vw')" style="display: none;"></i>
+							<i class="os-icon os-icon-maximize" id="maximize-1" onclick="maximizeSidebar()"></i>
+							<i class="os-icon os-icon-close" onclick="closeSidebar()"></i>
 						</div>
 						<div class="element-wrapper">
-							<h6 class="element-header" style="margin-top: 1.5rem;">
-								Quick Links
+							<h6 class="element-header element-header-top bg-light">
+								Create Campaign
 							</h6>
-							<div class="element-box-tp">
-								<div class="el-buttons-list full-width">
-									<a class="btn btn-white btn-sm" href="#"><i
-											class="os-icon os-icon-delivery-box-2"></i><span>Create New Product</span></a><a
-										class="btn btn-white btn-sm" href="#"><i
-											class="os-icon os-icon-window-content"></i><span>Customer Comments</span></a><a
-										class="btn btn-white btn-sm" href="#"><i
-											class="os-icon os-icon-wallet-loaded"></i><span>Store Settings</span></a>
-								</div>
+							<div class="element-box-tp" style="margin-top: 6rem;padding-right: 1.5rem;">
+								<form action="">
+									<div class="form-group mb-3">
+										<label for="" class="form-label">Campaign Name <span class="text-danger">*</span></label>
+										<input class="form-control form-control-sm datepicker w-100" type="text"
+											placeholder="Please Enter Campaign Name">
+									</div>
+									<div class="form-group mb-3">
+										<label for="" class="form-label">Effective Period <span
+												class="text-danger">*</span></label>
+										<input class="form-control form-control-sm w-100 daterange" type="text"
+											placeholder="Select State">
+									</div>
+									<div class="form-group mb-3">
+										<label for="" class="form-label">Campaign Folder <span
+												class="text-danger">*</span></label>
+										<select class="form-control select2">
+											<option>Select State</option>
+											<option>MKT Campaign</option>
+											<option>SER Campaign</option>
+											<option>Acqui Usr Campaign</option>
+											<option>SUR Usr Campaign</option>
+										</select>
+									</div>
+									<div class="form-group mb-3">
+										<label for="" class="form-label">Priority <span class="text-danger">*</span></label>
+										<select class="form-control select2">
+											<option>Select State</option>
+											<option>High</option>
+											<option>Medium</option>
+											<option>Low</option>
+										</select>
+									</div>
+									<div class="form-group mb-3">
+										<label for="" class="form-label">Campaign Type <span class="text-danger">*</span></label>
+										<select class="form-control select2">
+											<option>Select State</option>
+											<option>Normal</option>
+											<option>Acqusition</option>
+											<option>Activation</option>
+											<option>Retention</option>
+											<option>Refer</option>
+										</select>
+									</div>
+								</form>
 							</div>
-							<h6 class="element-header">
-								Support Agents
-							</h6>
-							<div class="element-box-tp">
-								<div class="profile-tile">
-									<a class="profile-tile-box" href="users_profile_small.html">
-										<div class="pt-avatar-w">
-											<img alt="" src="img/avatar1.jpg">
-										</div>
-										<div class="pt-user-name">
-											John Mayers
-										</div>
-									</a>
-									<div class="profile-tile-meta">
-										<ul>
-											<li>
-												Last Login:<strong>Online Now</strong>
-											</li>
-											<li>
-												Tickets:<strong><a href="apps_support_index.html">12</a></strong>
-											</li>
-											<li>
-												Response Time:<strong>2 hours</strong>
-											</li>
-										</ul>
-										<div class="pt-btn">
-											<a class="btn btn-success btn-sm" href="apps_full_chat.html">Send Message</a>
-										</div>
-									</div>
-								</div>
-								<div class="profile-tile">
-									<a class="profile-tile-box" href="users_profile_small.html">
-										<div class="pt-avatar-w">
-											<img alt="" src="img/avatar3.jpg">
-										</div>
-										<div class="pt-user-name">
-											Ben Gossman
-										</div>
-									</a>
-									<div class="profile-tile-meta">
-										<ul>
-											<li>
-												Last Login:<strong>Offline</strong>
-											</li>
-											<li>
-												Tickets:<strong><a href="apps_support_index.html">9</a></strong>
-											</li>
-											<li>
-												Response Time:<strong>3 hours</strong>
-											</li>
-										</ul>
-										<div class="pt-btn">
-											<a class="btn btn-secondary btn-sm" href="apps_full_chat.html">Send Message</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<h6 class="element-header">
-								Recent Activity
-							</h6>
-							<div class="element-box-tp">
-								<div class="activity-boxes-w">
-									<div class="activity-box-w">
-										<div class="activity-time">
-											10 Min
-										</div>
-										<div class="activity-box">
-											<div class="activity-avatar">
-												<img alt="" src="img/avatar1.jpg">
-											</div>
-											<div class="activity-info">
-												<div class="activity-role">
-													John Mayers
-												</div>
-												<strong class="activity-title">Opened New Account</strong>
-											</div>
-										</div>
-									</div>
-									<div class="activity-box-w">
-										<div class="activity-time">
-											2 Hours
-										</div>
-										<div class="activity-box">
-											<div class="activity-avatar">
-												<img alt="" src="img/avatar2.jpg">
-											</div>
-											<div class="activity-info">
-												<div class="activity-role">
-													Ben Gossman
-												</div>
-												<strong class="activity-title">Posted Comment</strong>
-											</div>
-										</div>
-									</div>
-									<div class="activity-box-w">
-										<div class="activity-time">
-											5 Hours
-										</div>
-										<div class="activity-box">
-											<div class="activity-avatar">
-												<img alt="" src="img/avatar3.jpg">
-											</div>
-											<div class="activity-info">
-												<div class="activity-role">
-													Phil Nokorin
-												</div>
-												<strong class="activity-title">Opened New Account</strong>
-											</div>
-										</div>
-									</div>
-									<div class="activity-box-w">
-										<div class="activity-time">
-											2 Days
-										</div>
-										<div class="activity-box">
-											<div class="activity-avatar">
-												<img alt="" src="img/avatar4.jpg">
-											</div>
-											<div class="activity-info">
-												<div class="activity-role">
-													Jenny Miksa
-												</div>
-												<strong class="activity-title">Uploaded Image</strong>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<h6 class="element-header">
-								Team Members
-							</h6>
-							<div class="element-box-tp">
-								<div class="input-search-w">
-									<input class="form-control rounded bright" placeholder="Search team members..."
-										type="search">
-								</div>
-								<div class="users-list-w">
-									<div class="user-w with-status status-green">
-										<div class="user-avatar-w">
-											<div class="user-avatar">
-												<img alt="" src="img/avatar1.jpg">
-											</div>
-										</div>
-										<div class="user-name">
-											<h6 class="user-title">
-												John Mayers
-											</h6>
-											<div class="user-role">
-												Account Manager
-											</div>
-										</div>
-										<a class="user-action" href="users_profile_small.html">
-											<div class="os-icon os-icon-email-forward"></div>
-										</a>
-									</div>
-									<div class="user-w with-status status-green">
-										<div class="user-avatar-w">
-											<div class="user-avatar">
-												<img alt="" src="img/avatar2.jpg">
-											</div>
-										</div>
-										<div class="user-name">
-											<h6 class="user-title">
-												Ben Gossman
-											</h6>
-											<div class="user-role">
-												Administrator
-											</div>
-										</div>
-										<a class="user-action" href="users_profile_small.html">
-											<div class="os-icon os-icon-email-forward"></div>
-										</a>
-									</div>
-									<div class="user-w with-status status-red">
-										<div class="user-avatar-w">
-											<div class="user-avatar">
-												<img alt="" src="img/avatar3.jpg">
-											</div>
-										</div>
-										<div class="user-name">
-											<h6 class="user-title">
-												Phil Nokorin
-											</h6>
-											<div class="user-role">
-												HR Manger
-											</div>
-										</div>
-										<a class="user-action" href="users_profile_small.html">
-											<div class="os-icon os-icon-email-forward"></div>
-										</a>
-									</div>
-									<div class="user-w with-status status-green">
-										<div class="user-avatar-w">
-											<div class="user-avatar">
-												<img alt="" src="img/avatar4.jpg">
-											</div>
-										</div>
-										<div class="user-name">
-											<h6 class="user-title">
-												Jenny Miksa
-											</h6>
-											<div class="user-role">
-												Lead Developer
-											</div>
-										</div>
-										<a class="user-action" href="users_profile_small.html">
-											<div class="os-icon os-icon-email-forward"></div>
-										</a>
-									</div>
+							<div class="element-box-tp element-header-bottom">
+								<div class="d-flex w-100 justify-content-end pt-3 pb-3">
+									<button class="btn btn-outline-primary" onclick="closeSidebar()">Cancel</button>
+									<button class="btn btn-outline-primary">Save</button>
+									<button class="btn btn-primary">Submit</button>
 								</div>
 							</div>
 						</div>
@@ -1351,93 +1212,28 @@
 		</script>
 
 		<script>
-			var barChart1 = $("#barChart1");
-			var barChart2 = $("#barChart2");
-
-			var barData1 = {
-				labels: ["January", "February", "March", "April", "May", "June"],
-				datasets: [{
-					label: "My First dataset",
-					backgroundColor: ["#5797FC", "#629FFF", "#6BA4FE", "#74AAFF", "#7AAEFF", '#85B4FF'],
-					borderColor: ['rgba(255,99,132,0)', 'rgba(54, 162, 235, 0)', 'rgba(255, 206, 86, 0)', 'rgba(75, 192, 192, 0)', 'rgba(153, 102, 255, 0)', 'rgba(255, 159, 64, 0)'],
-					borderWidth: 1,
-					data: [24, 42, 18, 34, 56, 28]
-				}]
-			};
-			// -----------------
-			// init bar chart
-			// -----------------
-
-			new Chart(barChart1, {
-				type: 'bar',
-				data: barData1,
-				options: {
-					scales: {
-						xAxes: [{
-							display: false,
-							ticks: {
-								fontSize: '11',
-								fontColor: '#969da5'
-							},
-							gridLines: {
-								color: 'rgba(0,0,0,0.05)',
-								zeroLineColor: 'rgba(0,0,0,0.05)'
-							}
-						}],
-						yAxes: [{
-							ticks: {
-								beginAtZero: true
-							},
-							gridLines: {
-								color: 'rgba(0,0,0,0.05)',
-								zeroLineColor: '#6896f9'
-							}
-						}]
-					},
-					legend: {
-						display: false
-					},
-					animation: {
-						animateScale: true
-					}
+			$('input.datepicker').daterangepicker({
+				"singleDatePicker": true,
+				timePicker: true,
+				timePickerIncrement: 30,
+				locale: {
+					format: 'YYYY-MM-DD hh:mm:ss'
 				}
 			});
-
-			new Chart(barChart2, {
-				type: 'bar',
-				data: barData1,
-				options: {
-					scales: {
-						xAxes: [{
-							display: false,
-							ticks: {
-								fontSize: '11',
-								fontColor: '#969da5'
-							},
-							gridLines: {
-								color: 'rgba(0,0,0,0.05)',
-								zeroLineColor: 'rgba(0,0,0,0.05)'
-							}
-						}],
-						yAxes: [{
-							ticks: {
-								beginAtZero: true
-							},
-							gridLines: {
-								color: 'rgba(0,0,0,0.05)',
-								zeroLineColor: '#6896f9'
-							}
-						}]
-					},
-					legend: {
-						display: false
-					},
-					animation: {
-						animateScale: true
-					}
+			$('input.daterange').daterangepicker({
+				"startDate": "2023-11-09",
+				"endDate": "2023-11-19",
+				timePicker: true,
+				timePickerIncrement: 30,
+				locale: {
+					format: 'YYYY-MM-DD hh:mm:ss'
 				}
-			});
+			})
 
+			$(".select2").select2({
+				dropdownAutoWidth: true,
+				width: '100%',
+			})
 		</script>
 
 		<script>
@@ -1459,6 +1255,22 @@
 
 				$('body').removeClass('overflow-none');
 				$('.all-wrapper').removeClass('content-panel-active');
+			}
+
+			function maximizeSidebar() {
+				$(".content-panel").css("width", "100vw")
+				$(".content-panel").css("max-width", "100vw")
+
+				$("#minimize-1").show()
+				$("#maximize-1").hide()
+			}
+
+			function minimizeSidebar(width) {
+				$(".content-panel").css("width", width)
+				$(".content-panel").css("max-width", width)
+
+				$("#maximize-1").show()
+				$("#minimize-1").hide()
 			}
 		</script>
 </body>
