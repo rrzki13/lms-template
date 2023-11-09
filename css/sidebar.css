@@ -92,3 +92,8 @@
    left: 0;
    border-top: 1px solid #ddd;
 }
+
+
+.ae-side-menu .ae-main-menu li a span {
+   text-transform: none !important;
+}
